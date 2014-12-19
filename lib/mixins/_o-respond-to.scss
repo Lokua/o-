@@ -1,0 +1,22 @@
+// adjust to taste
+$o-break-small: 320px; 
+$o-break-large: 1024px;
+
+// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+@mixin o-respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $o-break-small) { 
+      @content; 
+    }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $o-break-small + 1) and (max-width: $o-break-large - 1) { 
+      @content; 
+    }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $o-break-large) { 
+      @content; 
+    }
+  }
+}

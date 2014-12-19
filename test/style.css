@@ -1,0 +1,71 @@
+/* line 2, ../dist/lib/mixins/_o-clearfix.scss */
+.emboss:after, .minimal-box-shadow:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 4, style.scss */
+body {
+  background: #eee;
+}
+
+/* line 8, style.scss */
+main {
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* line 14, style.scss */
+.emboss {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  margin: 0 auto;
+  width: 128px;
+  height: 128px;
+  padding: 16px;
+}
+
+/* line 21, style.scss */
+.minimal-box-shadow {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  width: 128px;
+  height: 128px;
+  padding: 16px;
+}
+
+/* line 29, style.scss */
+.underline-text-on-hover {
+  position: relative;
+  text-decoration: none;
+}
+/* line 5, ../dist/lib/mixins/_o-underline-text-on-hover.scss */
+.underline-text-on-hover:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+/* line 18, ../dist/lib/mixins/_o-underline-text-on-hover.scss */
+.underline-text-on-hover:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* line 33, style.scss */
+code {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-weight: normal;
+  color: #444;
+}
+
+/*# sourceMappingURL=style.css.map */

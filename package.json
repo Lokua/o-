@@ -1,0 +1,34 @@
+{
+  "name": "o-",
+  "version": "0.0.1",
+  "description": "sass framework",
+  "main": "none",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "sass",
+    "lib",
+    "micro",
+    "scss",
+    "css"
+  ],
+  "author": "Joshua Kleckner <dev@lokua.net> (http://lokua.net/)",
+  "license": "MIT",
+  "devDependencies": {
+    "fs-extra": "^0.12.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-string-replace": "^1.0.0",
+    "load-grunt-tasks": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.1"
+  }
+}

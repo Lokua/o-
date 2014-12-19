@@ -1,0 +1,37 @@
+@import '../o-';
+
+
+body {
+  background: #eee;
+}
+
+main {
+  >> o-center;
+  width: 50%;
+}
+
+
+.emboss {
+  ++ %o-clearfix;
+  >> o-emboss;
+  >> o-center;
+  >> o-size(128px);
+  padding: 16px;
+}
+.minimal-box-shadow {
+  ++ %o-clearfix;
+  >> o-minimal-box-shadow;
+  >> o-center;
+  >> o-size(128px);
+  padding: 16px;
+}
+
+.underline-text-on-hover {
+  >> o-underline-text-on-hover;
+}
+
+code {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-weight: normal;
+  color: #444;
+}
