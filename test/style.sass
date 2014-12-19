@@ -1,0 +1,36 @@
+@import ../o-
+
+body
+  background: #eee
+
+main
+  +o-center
+  width: 50%
+
+.emboss
+  +o---(o-clearfix)
+  +o-emboss
+  +o-center
+  +o-size(128px)
+  padding: 16px
+  border-color: random-color()
+
+.minimal-box-shadow
+  +o---(o-clearfix)
+  +o-minimal-box-shadow
+  +o-center
+  +o-size(128px)
+  padding: 16px
+
+.underline-text-on-hover
+  +o-underline-text-on-hover
+
+code
+  font-family: Monaco, Consolas, 'Lucida Console', monospace
+  font-weight: normal
+  color: #444
+
+@for $x from 0 through 99
+  .swatch-#{$x}
+    color: random-color()
+    background: random-color()

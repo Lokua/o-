@@ -1,22 +1,10 @@
-/* line 2, ../dist/lib/mixins/_o-clearfix.scss */
-.emboss:after, .minimal-box-shadow:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-/* line 4, style.scss */
 body {
-  background: #eee;
-}
+  background: #eee; }
 
-/* line 8, style.scss */
 main {
   margin: 0 auto;
-  width: 50%;
-}
+  width: 50%; }
 
-/* line 14, style.scss */
 .emboss {
   background: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -26,46 +14,436 @@ main {
   width: 128px;
   height: 128px;
   padding: 16px;
-}
+  border-color: #1fd687; }
 
-/* line 21, style.scss */
 .minimal-box-shadow {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
   width: 128px;
   height: 128px;
-  padding: 16px;
-}
+  padding: 16px; }
 
-/* line 29, style.scss */
 .underline-text-on-hover {
   position: relative;
-  text-decoration: none;
-}
-/* line 5, ../dist/lib/mixins/_o-underline-text-on-hover.scss */
-.underline-text-on-hover:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-/* line 18, ../dist/lib/mixins/_o-underline-text-on-hover.scss */
-.underline-text-on-hover:hover:before {
-  visibility: visible;
-  transform: scaleX(1);
-}
+  text-decoration: none; }
+  .underline-text-on-hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s; }
+  .underline-text-on-hover:hover:before {
+    visibility: visible;
+    transform: scaleX(1); }
 
-/* line 33, style.scss */
 code {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
   font-weight: normal;
-  color: #444;
-}
+  color: #444; }
+
+.swatch-0 {
+  color: #93a8f7;
+  background: #fae545; }
+
+.swatch-1 {
+  color: #23e97c;
+  background: #6f99f2; }
+
+.swatch-2 {
+  color: #e7fb77;
+  background: #5d91dd; }
+
+.swatch-3 {
+  color: #8830b6;
+  background: #0e4b3a; }
+
+.swatch-4 {
+  color: #719b5b;
+  background: #0cfa09; }
+
+.swatch-5 {
+  color: #eef539;
+  background: #a43512; }
+
+.swatch-6 {
+  color: #f770f3;
+  background: #36e3aa; }
+
+.swatch-7 {
+  color: #b2c1e6;
+  background: #d4efbb; }
+
+.swatch-8 {
+  color: #cbf525;
+  background: #7e95e4; }
+
+.swatch-9 {
+  color: #3f34b5;
+  background: #cba33d; }
+
+.swatch-10 {
+  color: #05dd35;
+  background: #2c1059; }
+
+.swatch-11 {
+  color: #521f84;
+  background: #829292; }
+
+.swatch-12 {
+  color: #be7dc0;
+  background: #45d779; }
+
+.swatch-13 {
+  color: #750d3f;
+  background: #87b95f; }
+
+.swatch-14 {
+  color: #f99b78;
+  background: #9e4644; }
+
+.swatch-15 {
+  color: #5b215f;
+  background: #eea712; }
+
+.swatch-16 {
+  color: #894090;
+  background: #471ad3; }
+
+.swatch-17 {
+  color: #470e3d;
+  background: #6747bf; }
+
+.swatch-18 {
+  color: #1bb0f5;
+  background: #c31e88; }
+
+.swatch-19 {
+  color: #27533d;
+  background: #8ec834; }
+
+.swatch-20 {
+  color: #f7120a;
+  background: #261a52; }
+
+.swatch-21 {
+  color: #59b3ad;
+  background: #01e2d6; }
+
+.swatch-22 {
+  color: #4c7c11;
+  background: #5a1e41; }
+
+.swatch-23 {
+  color: #a974c2;
+  background: #a0a289; }
+
+.swatch-24 {
+  color: #eb7204;
+  background: #330be8; }
+
+.swatch-25 {
+  color: #980fef;
+  background: #3dc950; }
+
+.swatch-26 {
+  color: #5f0b78;
+  background: #69e311; }
+
+.swatch-27 {
+  color: #60899c;
+  background: #61cfeb; }
+
+.swatch-28 {
+  color: #7baee8;
+  background: #08c98a; }
+
+.swatch-29 {
+  color: #bc8d96;
+  background: #0ad303; }
+
+.swatch-30 {
+  color: #2b8202;
+  background: #a95559; }
+
+.swatch-31 {
+  color: #d0e654;
+  background: #b8c1fa; }
+
+.swatch-32 {
+  color: #9fe9a9;
+  background: #164b1d; }
+
+.swatch-33 {
+  color: #b92918;
+  background: #f86754; }
+
+.swatch-34 {
+  color: #abca28;
+  background: #b23d29; }
+
+.swatch-35 {
+  color: #cccd7a;
+  background: #08044b; }
+
+.swatch-36 {
+  color: #a99ff5;
+  background: #efd56f; }
+
+.swatch-37 {
+  color: #9a2add;
+  background: #15da73; }
+
+.swatch-38 {
+  color: #846538;
+  background: #73165b; }
+
+.swatch-39 {
+  color: #3621b6;
+  background: #b6a22d; }
+
+.swatch-40 {
+  color: #c3726d;
+  background: #a2cbf0; }
+
+.swatch-41 {
+  color: #b15299;
+  background: #5962cc; }
+
+.swatch-42 {
+  color: #16b924;
+  background: #ec540e; }
+
+.swatch-43 {
+  color: #ac0d83;
+  background: #f2daa4; }
+
+.swatch-44 {
+  color: #650589;
+  background: #648dd8; }
+
+.swatch-45 {
+  color: #530495;
+  background: #de5f83; }
+
+.swatch-46 {
+  color: #062013;
+  background: #6ae2a6; }
+
+.swatch-47 {
+  color: #6635e5;
+  background: #f6409a; }
+
+.swatch-48 {
+  color: #39e198;
+  background: #1d92d4; }
+
+.swatch-49 {
+  color: #2a8068;
+  background: #e920f2; }
+
+.swatch-50 {
+  color: #92c6ec;
+  background: #91b347; }
+
+.swatch-51 {
+  color: #04e33a;
+  background: #6b4cf3; }
+
+.swatch-52 {
+  color: #34f8e2;
+  background: #900f74; }
+
+.swatch-53 {
+  color: #e9e7c1;
+  background: #e7c778; }
+
+.swatch-54 {
+  color: #8e1db1;
+  background: #bdf6ff; }
+
+.swatch-55 {
+  color: #5b55d4;
+  background: #171231; }
+
+.swatch-56 {
+  color: #6700b7;
+  background: #ba0a8a; }
+
+.swatch-57 {
+  color: #d59fb0;
+  background: #b04ccc; }
+
+.swatch-58 {
+  color: #153811;
+  background: #4966d5; }
+
+.swatch-59 {
+  color: #437646;
+  background: #8192c3; }
+
+.swatch-60 {
+  color: #2dc355;
+  background: #f16eeb; }
+
+.swatch-61 {
+  color: #d03243;
+  background: #543735; }
+
+.swatch-62 {
+  color: #6a0fbc;
+  background: #d9fc89; }
+
+.swatch-63 {
+  color: #73a481;
+  background: #f43ab2; }
+
+.swatch-64 {
+  color: #453caa;
+  background: #77cc66; }
+
+.swatch-65 {
+  color: #01cd4f;
+  background: #7212ae; }
+
+.swatch-66 {
+  color: #451f53;
+  background: #7bd243; }
+
+.swatch-67 {
+  color: #3626fa;
+  background: #eadd95; }
+
+.swatch-68 {
+  color: #724b2e;
+  background: #b1411c; }
+
+.swatch-69 {
+  color: #20f580;
+  background: #dd9975; }
+
+.swatch-70 {
+  color: #f9df2b;
+  background: #ef7431; }
+
+.swatch-71 {
+  color: #b7f669;
+  background: #2654c8; }
+
+.swatch-72 {
+  color: #cb091d;
+  background: #0195ee; }
+
+.swatch-73 {
+  color: #76f5d2;
+  background: #f756a1; }
+
+.swatch-74 {
+  color: #d9f1fb;
+  background: #80bad6; }
+
+.swatch-75 {
+  color: #1096e3;
+  background: #e93272; }
+
+.swatch-76 {
+  color: #afdf60;
+  background: #926f3b; }
+
+.swatch-77 {
+  color: #2bed9e;
+  background: #d3a5fb; }
+
+.swatch-78 {
+  color: #dd4bf7;
+  background: #2f62ac; }
+
+.swatch-79 {
+  color: #514c84;
+  background: #9b1ee2; }
+
+.swatch-80 {
+  color: #bd6b31;
+  background: #a4e94e; }
+
+.swatch-81 {
+  color: #3c7edb;
+  background: #6de2db; }
+
+.swatch-82 {
+  color: #3a47c4;
+  background: #444681; }
+
+.swatch-83 {
+  color: #59e976;
+  background: #fe2890; }
+
+.swatch-84 {
+  color: #05d00a;
+  background: #7d3749; }
+
+.swatch-85 {
+  color: #47f0ed;
+  background: #907db8; }
+
+.swatch-86 {
+  color: #d2f1cb;
+  background: #27c22e; }
+
+.swatch-87 {
+  color: #7dc214;
+  background: #587b3f; }
+
+.swatch-88 {
+  color: #8948b4;
+  background: #5f8914; }
+
+.swatch-89 {
+  color: #2c5729;
+  background: #3bdb77; }
+
+.swatch-90 {
+  color: #e40f46;
+  background: #c1785e; }
+
+.swatch-91 {
+  color: #7b69ec;
+  background: #372347; }
+
+.swatch-92 {
+  color: #a4d044;
+  background: #32a189; }
+
+.swatch-93 {
+  color: #77a80e;
+  background: #7640cd; }
+
+.swatch-94 {
+  color: #8df93a;
+  background: #d50fde; }
+
+.swatch-95 {
+  color: #bbb8e1;
+  background: #5e5abc; }
+
+.swatch-96 {
+  color: #dcedce;
+  background: #b14804; }
+
+.swatch-97 {
+  color: #c6d3c6;
+  background: #22eee4; }
+
+.swatch-98 {
+  color: #8d1e87;
+  background: #66f168; }
+
+.swatch-99 {
+  color: #e08b69;
+  background: #2adac5; }
 
 /*# sourceMappingURL=style.css.map */

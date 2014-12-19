@@ -18,41 +18,53 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
-      test: {
-        files: {
-          'test/sass-test.css': 'test/sass-test.sass'
-        }
+    'sass-convert': {
+      options: {
+        from: 'scss',
+        to: 'sass'
       },
-      dev: {
-        options: {
-          lineNumbers: true,
-          style: 'expanded'
-        },
-        files: {
-          'o-.css': 'o-.scss',
-          'test/style.css': 'test/style.scss'
-        }
+      files: {
+        src: ['lib/**/*.scss'],
+        dest: '__dest'
       }
     },
 
-    'string-replace': {
+    sass: {
       test: {
         files: {
-          'dist/': 'lib/**/*.scss',
-          'test/style.scss': 'test/style.brute'
-        },
-        options: {
-          replacements: [{
-            pattern: /\+\+/ig,
-            replacement: '@extend'
-          }, {
-            pattern: />>/ig,
-            replacement: '@include'
-          }]
+          'test/style.css': 'test/style.sass'
         }
-      }
+      }//,
+      // dev: {
+      //   options: {
+      //     lineNumbers: true,
+      //     style: 'expanded'/*,
+      //     sourcemap: 'none'*/
+      //   },
+      //   files: {
+      //     'o-.css': 'o-.sass',
+      //     'test/style.css': 'test/style.sass'
+      //   }
+      // }
     },
+
+    // 'string-replace': {
+    //   test: {
+    //     files: {
+    //       'dist/': 'lib/**/*.sass',
+    //       'test/style.sass': 'test/style.brute'
+    //     },
+    //     options: {
+    //       replacements: [{
+    //         pattern: /\+\+/ig,
+    //         replacement: '@extend'
+    //       }, {
+    //         pattern: />>/ig,
+    //         replacement: '@include'
+    //       }]
+    //     }
+    //   }
+    // },
 
     watch: {
       jade: { 
@@ -60,8 +72,8 @@ module.exports = function(grunt) {
         tasks: ['jade:dev']
       },
       sass: {
-        files: ['dist/**/*.scss', 'test/*.brute'],
-        tasks: ['string-replace:test', 'sass:dev']
+        files: ['dist/**/*.sass', 'test/*.sass'],
+        tasks: [/*'string-replace:test',*/ 'sass:test']
       }
     }
 

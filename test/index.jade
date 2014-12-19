@@ -14,3 +14,8 @@ html
 
       h3: code #{'>> o-underline-text-on-hover'}
       .underline-text-on-hover(style='height:32px;background:#777;')
+
+    div
+      - var n = 99;
+      while n--
+        div(style='width:16px;height:16px', class='swatch-#{n}') 'swatch-#{n}'

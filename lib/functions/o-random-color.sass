@@ -1,0 +1,4 @@
+@function random-color($random-alpha: false)
+  @if $random-alpha == true 
+    @return rgba(random(256)-1, random(256)-1, random(256)-1, random(100)/100)
+  @return rgb(random(256)-1, random(256)-1, random(256)-1)
