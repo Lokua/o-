@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "sass framework",
   "main": "none",
+  "scripts": {
+    "gen": "node bin/generate-imports.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -25,6 +28,8 @@
     "grunt-contrib-jade": "^0.13.0",
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-execute": "^0.2.2",
     "grunt-sass-convert": "^0.2.0",
     "grunt-string-replace": "^1.0.0",
     "load-grunt-tasks": "^1.0.0"

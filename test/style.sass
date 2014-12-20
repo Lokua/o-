@@ -8,7 +8,7 @@ main
   width: 50%
 
 .emboss
-  +o---(o-clearfix)
+  +o--(o-clearfix)
   +o-emboss
   +o-center
   +o-size(128px)
@@ -16,7 +16,7 @@ main
   border-color: random-color()
 
 .minimal-box-shadow
-  +o---(o-clearfix)
+  +o--(o-clearfix)
   +o-minimal-box-shadow
   +o-center
   +o-size(128px)
@@ -30,7 +30,14 @@ code
   font-weight: normal
   color: #444
 
-@for $x from 0 through 99
-  .swatch-#{$x}
-    color: random-color()
-    background: random-color()
+.golden-ratio-left
+  width: o-golden-ratio(100, 2)
+  height: o-golden-ratio(61.8, -2)
+
+
+
+
+// @for $x from 0 through 99
+//   .swatch-#{$x}
+//     color: random-color()
+//     background: random-color()

@@ -1,37 +1,21 @@
-// ---
-// shorthand for @extend
-// ripped from https://gist.github.com/blackfalcon/7937413
-// NOTE: do not pass .klass or %klass, but just klass
-// o-x will figure it out
-=o-x($name, $silent: false)
-  @if $silent == true
-    @extend %#{$name} !optional
-  @else
-    @extend .#{$name} !optional
-
-// ---
-// shorthand for silent @extend (do not pass `.` with $name)
-=o---($name)
-  @extend .#{$name} !optional
-
-// ---
-// shorthand for normal @extend (do not pass `%` with $name)
-=o--x($name)
-  @extend %#{$name} !optional
-
-@import mixins/o-clearfix
+// auto generated from o-/bin/generate-imports.js
+@import core
+@import classes/o-center-child
+@import classes/o-center-parent
+@import classes/o-clearfix
+@import classes/o-nopaque
+@import classes/o-opaque
+@import components/_o-components
+@import functions/o-as-percent
+@import functions/o-golden-ratio
+@import functions/o-random-color
+@import functions/o-strip-unit
 @import mixins/o-center
+@import mixins/o-clearfix
 @import mixins/o-emboss
 @import mixins/o-horizontal-nav
+@import mixins/o-list-unstyled
 @import mixins/o-minimal-box-shadow
 @import mixins/o-respond-to
 @import mixins/o-size
 @import mixins/o-underline-text-on-hover
-
-@import functions/o-random-color
-
-@import classes/o-clearfix
-@import classes/o-nopaque
-@import classes/o-opaque
-
-@import components/o-components

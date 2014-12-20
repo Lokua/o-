@@ -6,6 +6,12 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    exec: {
+      gen: {
+        cmd: 'npm run gen'
+      }
+    },
+
     jade: {
       dev: {
         options: {
@@ -31,40 +37,32 @@ module.exports = function(grunt) {
 
     sass: {
       test: {
+        options: {
+          style: 'expanded'
+        },
         files: {
           'test/style.css': 'test/style.sass'
         }
-      }//,
-      // dev: {
-      //   options: {
-      //     lineNumbers: true,
-      //     style: 'expanded'/*,
-      //     sourcemap: 'none'*/
-      //   },
-      //   files: {
-      //     'o-.css': 'o-.sass',
-      //     'test/style.css': 'test/style.sass'
-      //   }
-      // }
+      }
     },
 
-    // 'string-replace': {
-    //   test: {
-    //     files: {
-    //       'dist/': 'lib/**/*.sass',
-    //       'test/style.sass': 'test/style.brute'
-    //     },
-    //     options: {
-    //       replacements: [{
-    //         pattern: /\+\+/ig,
-    //         replacement: '@extend'
-    //       }, {
-    //         pattern: />>/ig,
-    //         replacement: '@include'
-    //       }]
-    //     }
-    //   }
-    // },
+    'string-replace': {
+      test: {
+        files: {
+          'dist/': 'lib/**/*.sass',
+          'test/style.sass': 'test/style.brute'
+        },
+        options: {
+          replacements: [{
+            pattern: /\+\+/ig,
+            replacement: '@extend'
+          }, {
+            pattern: />>/ig,
+            replacement: '@include'
+          }]
+        }
+      }
+    },
 
     watch: {
       jade: { 
@@ -72,12 +70,13 @@ module.exports = function(grunt) {
         tasks: ['jade:dev']
       },
       sass: {
-        files: ['dist/**/*.sass', 'test/*.sass'],
-        tasks: [/*'string-replace:test',*/ 'sass:test']
+        files: ['lib/**/*.sass', 'test/*.sass'],
+        tasks: ['exec', 'sass:test']
       }
     }
 
   });
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('gen', ['exec']);
 }

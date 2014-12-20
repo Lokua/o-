@@ -1,0 +1,16 @@
+$o-phi: 1.618034
+
+@function o-golden-ratio($number: 100, $scale: 1)
+  $ret: $number
+  $n: $scale
+  @if $scale < 0
+    @while $n < 0
+      $ret: $ret * ($o-phi - 1)
+      $n: $n + 1
+    @return $ret
+  @if $scale > 0
+    @while $n > 0
+      $ret: $ret * $o-phi
+      $n: $n - 1
+    @return $ret
+
