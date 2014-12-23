@@ -4,12 +4,12 @@ $o-break-large: 1024px
 
 // http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
 =o-respond-to($media)
-  @if $media == handhelds
+  @if $media == mobile
     @media only screen and (max-width: $o-break-small)
       @content
-  @else if $media == medium-screens
+  @else if $media == tablet
     @media only screen and (min-width: $o-break-small + 1) and (max-width: $o-break-large - 1)
       @content
-  @else if $media == wide-screens
+  @else if $media == computer
     @media only screen and (min-width: $o-break-large)
       @content

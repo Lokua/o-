@@ -1,43 +1,29 @@
 @import ../o-
+@import ../o-grid
 
-body
-  background: #eee
+*,
+*:before,
+*:after
+  box-sizing: border-box
 
-main
-  +o-center
-  width: 50%
+#main-wrapper
+  +o-x(o-col-12)
 
-.emboss
-  +o--(o-clearfix)
-  +o-emboss
-  +o-center
-  +o-size(128px)
-  padding: 16px
-  border-color: random-color()
+$color: #FF8080
 
-.minimal-box-shadow
-  +o--(o-clearfix)
-  +o-minimal-box-shadow
-  +o-center
-  +o-size(128px)
-  padding: 16px
+.half
+  +o-x(o-col-6)
+  .content 
+    background: invert($color)
+    padding: 16px
+  @media (max-width: 700px)
+    +o-span(12)
 
-.underline-text-on-hover
-  +o-underline-text-on-hover
-
-code
-  font-family: Monaco, Consolas, 'Lucida Console', monospace
-  font-weight: normal
-  color: #444
-
-.golden-ratio-left
-  width: o-golden-ratio(100, 2)
-  height: o-golden-ratio(61.8, -2)
-
-
-
-
-// @for $x from 0 through 99
-//   .swatch-#{$x}
-//     color: random-color()
-//     background: random-color()
+.third
+  +o-x(o-col-4)
+  .content
+    background: complement($color)
+    padding: 8px
+  @media (max-width: 700px)
+    +o-span(12)
+  
