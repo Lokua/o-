@@ -19,7 +19,8 @@ module.exports = function(grunt) {
           layout: false
         },
         files: {
-          'test/index.html': 'test/index.jade'
+          'test/index.html': 'test/index.jade',
+          'test/grid.html': 'test/grid.jade',
         }
       }
     },
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
 
     watch: {
       jade: { 
-        files: ['test/index.jade'],
+        files: ['test/*.jade'],
         tasks: ['jade:dev']
       },
       sass: {

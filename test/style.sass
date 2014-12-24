@@ -6,24 +6,21 @@
 *:after
   box-sizing: border-box
 
-#main-wrapper
-  +o-x(o-col-12)
-
-$color: #FF8080
-
-.half
-  +o-x(o-col-6)
-  .content 
-    background: invert($color)
+#grid-demo
+  background: #444
+  +o--(o-grid)
+  header,
+  footer
+    +o--(o-col-12)
+  header + section
+    +o--(o-col-2)
+  main
+    +o--(o-col-10)
+    section
+      +o--(o-col-6)
+  .inner
+    color: #fbfbfb
+    background: #444
+    border: 1px solid o-grayscale(255, 0.25)
     padding: 16px
-  @media (max-width: 700px)
-    +o-span(12)
-
-.third
-  +o-x(o-col-4)
-  .content
-    background: complement($color)
-    padding: 8px
-  @media (max-width: 700px)
-    +o-span(12)
   

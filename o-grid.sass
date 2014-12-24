@@ -1,18 +1,27 @@
-$o-pad: 16px
+$o-auto-break: true
+$o-max-width-break: 700px
 
-.o-grid
+%o-grid
   +o--(o-clearfix)
-  padding: 0 0 $o-pad 0
   width: 100%
-
-@for $i from 1 through 12
-  .o-col-#{$i}
-    width: 100% * ($i/12)    
-    padding-right: $o-pad
-    float: left
-    &:last-of-type
-      padding-right: 0
 
 =o-span($number)
   width: 100% * ($number/12)
+
+@for $i from 1 through 12
+  %o-col-#{$i}
+    +o-span($i)
+    float: left
+    @if $o-auto-break
+      @media (max-width: $o-max-width-break)
+        +o-span(12)
+
+=o-generate-grid-classes
+  .o-grid
+    +o--(o-grid)
+  @for $i from 1 through 12
+    .o-col-#{$i}
+      +o--(o-col-#{$i})
+
+
 
