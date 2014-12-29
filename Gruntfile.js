@@ -19,8 +19,7 @@ module.exports = function(grunt) {
           layout: false
         },
         files: {
-          'test/index.html': 'test/index.jade',
-          'test/grid.html': 'test/grid.jade',
+          'demo/index.html': 'demo/index.jade'
         }
       }
     },
@@ -32,47 +31,29 @@ module.exports = function(grunt) {
       },
       files: {
         src: ['lib/**/*.scss'],
-        dest: '__dest'
+        dest: 'scss'
       }
     },
 
     sass: {
-      test: {
+      demo: {
         options: {
           style: 'expanded'
         },
         files: {
-          'test/style.css': 'test/style.sass'
-        }
-      }
-    },
-
-    'string-replace': {
-      test: {
-        files: {
-          'dist/': 'lib/**/*.sass',
-          'test/style.sass': 'test/style.brute'
-        },
-        options: {
-          replacements: [{
-            pattern: /\+\+/ig,
-            replacement: '@extend'
-          }, {
-            pattern: />>/ig,
-            replacement: '@include'
-          }]
+          'demo/style.css': 'demo/style.sass'
         }
       }
     },
 
     watch: {
       jade: { 
-        files: ['test/*.jade'],
+        files: ['demo/*.jade'],
         tasks: ['jade:dev']
       },
       sass: {
-        files: ['lib/**/*.sass', 'test/*.sass'],
-        tasks: ['exec', 'sass:test']
+        files: ['lib/**/*.sass', 'demo/*.sass'],
+        tasks: ['exec', 'sass:demo']
       }
     }
 

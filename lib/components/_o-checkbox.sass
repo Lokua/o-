@@ -1,3 +1,20 @@
+// ---
+// creates a wrapper and uniform, no-frills checkbox.
+// Note the jade example, this structure is a must.
+// ## Example
+// ### Sass
+// ```sass
+// .checkbox
+//   +o--(o-checkbox) // using o-'s silent @extend mixin
+// ```
+// ### Jade
+// ```jade
+// .checkbox
+//   input#my-checkbox(type='checkbox')  
+//   label(for='my-checkbox') Check Me
+// ```
+// based on [this pen](http://codepen.io/CreativeJuiz/pen/zqKtp)
+// ---
 %o-checkbox 
   display: inline-block
   
@@ -64,7 +81,7 @@
     // padding-top: 2.5px
     margin-bottom: 16px
     &:hover:before 
-      border: 1px solid rgba(0,127,63,0.5) !important
+      border: 1px solid rgba(0,63,127,0.5) !important
   
   // accessibility
   // [type="checkbox"]:checked:focus + label:before,

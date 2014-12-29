@@ -1,0 +1,40 @@
+@import ../o-
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+  margin: 0
+
+body
+  background: #eee
+  font-family: verdana, sans-serif
+  font-size: 14px
+
+.inner
+  padding: 16px 
+
+#main-container
+  +o--(o-grid)
+
+#main-header
+  +o--(o-col-12)
+  h1 
+    text-align: center
+
+#sidebar
+  +o--(o-col-3)
+  border-right: o-grayscale(127, 0.25)
+  ul
+    +o-list-unstyled
+    // padding: 16px
+    // background: #fff
+
+#content
+  +o--(o-col-9)
+
+.doc
+  background: #fff
+  padding: 16px
+  margin-bottom: 32px
+  border: 1px solid o-grayscale(127, 0.25)

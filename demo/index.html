@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>o- demo</title>
+    <link rel="stylesheet" href="markdown.css">
+    <link rel="stylesheet" href="monokai.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="highlight.pack.js"></script>
+  </head>
+  <body>
+    <div id="main-container" class="markdown-body">
+      <div id="main-header">
+        <div class="inner">
+          <h1>o-</h1>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="inner">
+          <nav>
+            <ul>
+              <li><a href="#classes/o-center-child">classes/o-center-child</a></li>
+              <li><a href="#classes/o-center-parent">classes/o-center-parent</a></li>
+              <li><a href="#classes/o-clearfix">classes/o-clearfix</a></li>
+              <li><a href="#classes/o-nopaque">classes/o-nopaque</a></li>
+              <li><a href="#classes/o-opaque">classes/o-opaque</a></li>
+              <li><a href="#components/o-checkbox">components/o-checkbox</a></li>
+              <li><a href="#components/o-grid">components/o-grid</a></li>
+              <li><a href="#components/o-loader">components/o-loader</a></li>
+              <li><a href="#functions/o-as-percent">functions/o-as-percent</a></li>
+              <li><a href="#functions/o-golden-ratio">functions/o-golden-ratio</a></li>
+              <li><a href="#functions/o-grayscale">functions/o-grayscale</a></li>
+              <li><a href="#functions/o-random-color">functions/o-random-color</a></li>
+              <li><a href="#functions/o-strip-unit">functions/o-strip-unit</a></li>
+              <li><a href="#mixins/o--">mixins/o--</a></li>
+              <li><a href="#mixins/o-center">mixins/o-center</a></li>
+              <li><a href="#mixins/o-clearfix">mixins/o-clearfix</a></li>
+              <li><a href="#mixins/o-emboss">mixins/o-emboss</a></li>
+              <li><a href="#mixins/o-horizontal-nav">mixins/o-horizontal-nav</a></li>
+              <li><a href="#mixins/o-list-unstyled">mixins/o-list-unstyled</a></li>
+              <li><a href="#mixins/o-minimal-box-shadow">mixins/o-minimal-box-shadow</a></li>
+              <li><a href="#mixins/o-respond-to">mixins/o-respond-to</a></li>
+              <li><a href="#mixins/o-size">mixins/o-size</a></li>
+              <li><a href="#mixins/o-underline-text-on-hover">mixins/o-underline-text-on-hover</a></li>
+              <li><a href="#mixins/o-x">mixins/o-x</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="content">
+        <div class="inner"><div class='doc'>
+<a name='components/o-checkbox'></a>
+<h2>o-checkbox</h2>
+<p>creates a wrapper and uniform, no-frills checkbox.
+Note the jade example, this structure is a must.</p>
+<h2>Example</h2>
+<h3>Sass</h3>
+<pre><code class="lang-sass"><span class="hljs-class">.checkbox</span>
+  +<span class="hljs-function"><span class="hljs-title">o--</span><span class="hljs-params">(o-checkbox)</span></span> <span class="hljs-comment">// using o-'s silent @extend mixin</span>
+</code></pre>
+<h3>Jade</h3>
+<pre><code class="lang-jade"><span class="hljs-class">.checkbox</span>
+  input#<span class="hljs-function"><span class="hljs-title">my-checkbox</span><span class="hljs-params">(type=<span class="hljs-string">'checkbox'</span>)</span></span>  
+  <span class="hljs-function"><span class="hljs-title">label</span><span class="hljs-params">(for=<span class="hljs-string">'my-checkbox'</span>)</span></span> Check Me
+</code></pre>
+<p>based on <a href="http://codepen.io/CreativeJuiz/pen/zqKtp">this pen</a></p>
+</div><div class='doc'>
+<a name='components/o-loader'></a>
+<h2>o-loader</h2>
+<p>a pure css (and atypical) animated loader; implemented
+as a mixin to keep keyframes out of the final output if the
+loader is not being used.</p>
+</div><div class='doc'>
+<a name='mixins/o--'></a>
+<h2>o--</h2>
+<p>shorthand for silent @extend (do not pass <code>%</code> with $name)</p>
+</div><div class='doc'>
+<a name='mixins/o-x'></a>
+<h2>o-x</h2>
+<p>shorthand for normal @extend (do not pass <code>.</code> with $name)</p>
+</div>
+        </div>
+      </div>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<div class='doc'>
+<a name='components/o-checkbox'></a>
+<h2>o-checkbox</h2>
+<p>creates a wrapper and uniform, no-frills checkbox.
+Note the jade example, this structure is a must.</p>
+<h2>Example</h2>
+<h3>Sass</h3>
+<pre><code class="lang-sass"><span class="hljs-class">.checkbox</span>
+  +<span class="hljs-function"><span class="hljs-title">o--</span><span class="hljs-params">(o-checkbox)</span></span> <span class="hljs-comment">// using o-'s silent @extend mixin</span>
+</code></pre>
+<h3>Jade</h3>
+<pre><code class="lang-jade"><span class="hljs-class">.checkbox</span>
+  input#<span class="hljs-function"><span class="hljs-title">my-checkbox</span><span class="hljs-params">(type=<span class="hljs-string">'checkbox'</span>)</span></span>  
+  <span class="hljs-function"><span class="hljs-title">label</span><span class="hljs-params">(for=<span class="hljs-string">'my-checkbox'</span>)</span></span> Check Me
+</code></pre>
+<p>based on <a href="http://codepen.io/CreativeJuiz/pen/zqKtp">this pen</a></p>
+</div><div class='doc'>
+<a name='components/o-loader'></a>
+<h2>o-loader</h2>
+<p>a pure css (and atypical) animated loader; implemented
+as a mixin to keep keyframes out of the final output if the
+loader is not being used.</p>
+</div><div class='doc'>
+<a name='mixins/o--'></a>
+<h2>o--</h2>
+<p>shorthand for silent @extend (do not pass <code>%</code> with $name)</p>
+</div><div class='doc'>
+<a name='mixins/o-x'></a>
+<h2>o-x</h2>
+<p>shorthand for normal @extend (do not pass <code>.</code> with $name)</p>
+</div>
