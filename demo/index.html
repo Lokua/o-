@@ -18,40 +18,92 @@
         <div class="inner">
           <nav>
             <ul>
-              <li><a href="#classes/o-center-child">classes/o-center-child</a></li>
-              <li><a href="#classes/o-center-parent">classes/o-center-parent</a></li>
-              <li><a href="#classes/o-clearfix">classes/o-clearfix</a></li>
-              <li><a href="#classes/o-nopaque">classes/o-nopaque</a></li>
-              <li><a href="#classes/o-opaque">classes/o-opaque</a></li>
-              <li><a href="#components/o-checkbox">components/o-checkbox</a></li>
-              <li><a href="#components/o-grid">components/o-grid</a></li>
-              <li><a href="#components/o-loader">components/o-loader</a></li>
-              <li><a href="#functions/o-as-percent">functions/o-as-percent</a></li>
-              <li><a href="#functions/o-golden-ratio">functions/o-golden-ratio</a></li>
-              <li><a href="#functions/o-grayscale">functions/o-grayscale</a></li>
-              <li><a href="#functions/o-random-color">functions/o-random-color</a></li>
-              <li><a href="#functions/o-strip-unit">functions/o-strip-unit</a></li>
-              <li><a href="#mixins/o--">mixins/o--</a></li>
-              <li><a href="#mixins/o-center">mixins/o-center</a></li>
-              <li><a href="#mixins/o-clearfix">mixins/o-clearfix</a></li>
-              <li><a href="#mixins/o-emboss">mixins/o-emboss</a></li>
-              <li><a href="#mixins/o-horizontal-nav">mixins/o-horizontal-nav</a></li>
-              <li><a href="#mixins/o-list-unstyled">mixins/o-list-unstyled</a></li>
-              <li><a href="#mixins/o-minimal-box-shadow">mixins/o-minimal-box-shadow</a></li>
-              <li><a href="#mixins/o-respond-to">mixins/o-respond-to</a></li>
-              <li><a href="#mixins/o-size">mixins/o-size</a></li>
-              <li><a href="#mixins/o-underline-text-on-hover">mixins/o-underline-text-on-hover</a></li>
-              <li><a href="#mixins/o-x">mixins/o-x</a></li>
+              <li><a href="#o-clearfix">%o-clearfix</a></li>
+              <li><a href="#o-nopaque">%o-nopaque</a></li>
+              <li><a href="#o-opaque">%o-opaque</a></li>
+              <li><a href="#o-v-center-child">%o-v-center-child</a></li>
+              <li><a href="#o-v-center-parent">%o-v-center-parent</a></li>
+              <li><a href="#o-checkbox">%o-checkbox</a></li>
+              <li><a href="#o-grid">%o-grid</a></li>
+              <li><a href="#o-span">=o-span</a></li>
+              <li><a href="#o-col-*">%o-col-*</a></li>
+              <li><a href="#o-generate-grid-classes">=o-generate-grid-classes</a></li>
+              <li><a href="#o-loader">=o-loader</a></li>
+              <li><a href="#o-as-percent">o-as-percent</a></li>
+              <li><a href="#o-golden-ratio">o-golden-ratio</a></li>
+              <li><a href="#o-grayscale">o-grayscale</a></li>
+              <li><a href="#o-random-color">o-random-color</a></li>
+              <li><a href="#o-strip-unit">o-strip-unit</a></li>
+              <li><a href="#o--">=o--</a></li>
+              <li><a href="#o-center">=o-center</a></li>
+              <li><a href="#o-clearfix">=o-clearfix</a></li>
+              <li><a href="#o-emboss">=o-emboss</a></li>
+              <li><a href="#o-horizontal-nav">=o-horizontal-nav</a></li>
+              <li><a href="#o-list-unstyled">=o-list-unstyled</a></li>
+              <li><a href="#o-size">=o-size</a></li>
+              <li><a href="#o-underline-text-on-hover">=o-underline-text-on-hover</a></li>
+              <li><a href="#o-x">=o-x</a></li>
             </ul>
           </nav>
         </div>
       </div>
       <div id="content">
+        <div class="inner"><h1 id="o-">o-</h1>
+<h6 id="pronounced-oh-dash-">pronounced &quot;Oh Dash&quot;</h6>
+<blockquote>
+<p>micro-framework for <a href="http://sass-lang.com">sass</a></p>
+</blockquote>
+<h2 id="why">Why</h2>
+<p>Because I love to code, and wanted something simple and namespaced as to not collide with
+existing frameworks (bootstrap <code>@size</code> vs bourbon <code>@size</code> for example).</p>
+<p>This project is in its early stage of development - published at this point
+to reserve the package name. Names, structure, and implementations will surely change; more details will follow.</p>
+<h2 id="install">Install</h2>
+<pre><code class="lang-bash">npm install o- --save-dev
+</code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-sass">@import path_to_node_modules/o-/o-
+</code></pre>
+<p>Refer to the API documentation for placeholder, 
+function, and mixin specifics located at <a href="./demo/index.html">./demo/index.html</a></p>
+<h2 id="license">License</h2>
+<p><a href="http://lokua.net/license-mit.html">MIT</a></p>
+
+        </div>
         <div class="inner"><div class='doc'>
-<a name='components/o-checkbox'></a>
-<h2>o-checkbox</h2>
-<p>creates a wrapper and uniform, no-frills checkbox.
-Note the jade example, this structure is a must.</p>
+<p><a name="o-clearfix"></a></p>
+<h1>%o-clearfix</h1>
+<p>yes, <strong>o-</strong> has a clearfix too!</p>
+</div><div class='doc'>
+<p><a name="o-nopaque"></a></p>
+<h1>%o-nopaque</h1>
+<p><strong>nopaque</strong> as in &quot;no opacity&quot;</p>
+</div><div class='doc'>
+<p><a name="o-opaque"></a></p>
+<h1>%o-opaque</h1>
+<p>maximum opacity</p>
+</div><div class='doc'>
+<p><a name="o-v-center-child"></a></p>
+<h1>%o-v-center-child</h1>
+<p>Center an element that is a direct descendent of an element
+that extends <code>%o-v-center-parent</code>.</p>
+<p>see <a href="#classes/%25o-v-center-parent">%o-v-center-parent</a> <br>
+see related pen at [http://codepen.io/Lokua/pen/zxKQWG?editors=110)</p>
+</div><div class='doc'>
+<p><a name="o-v-center-parent"></a></p>
+<h1>%o-v-center-parent</h1>
+<p>Container for vertically centering child elements.
+To comply, child elements must have <code>vertical-align: middle;</code> or you
+can simply <code>@extend %o-v-center-child</code>.
+Note that %o-center-parent also has <code>vertical-align: middle</code>, so parents
+can be nested.</p>
+<p>see <a href="#classes/%25o-v-center-child">%o-v-center-child</a> <br>
+see related pen at [http://codepen.io/Lokua/pen/zxKQWG?editors=110)</p>
+</div><div class='doc'>
+<p><a name="o-checkbox"></a></p>
+<h1>%o-checkbox</h1>
+<p>Creates a wrapper and uniform, no-frills checkbox.
+Note the jade example, this structure (including the label) is a must.</p>
 <h2>Example</h2>
 <h3>Sass</h3>
 <pre><code class="lang-sass"><span class="hljs-class">.checkbox</span>
@@ -64,19 +116,103 @@ Note the jade example, this structure is a must.</p>
 </code></pre>
 <p>based on <a href="http://codepen.io/CreativeJuiz/pen/zqKtp">this pen</a></p>
 </div><div class='doc'>
-<a name='components/o-loader'></a>
-<h2>o-loader</h2>
+<p><a name="o-grid"></a></p>
+<h1>%o-grid</h1>
+<p>Generic grid container with 100% width and clearfix extension
+<a name="o-span"></a></p>
+<h1>=o-span($number)</h1>
+<p>Dynamically add <code>$number</code> of columns to an element.
+The o-grid is based on a 12 column grid with no gutters,
+By default, a media query is included to set width to 100%, or 12 columns
+on screens with 768px max which can be changed through the <code>$o-max-width-break</code> variable.
+To disable the break functionality entirely, set <code>$o-auto-break: false</code>.
+<a name="o-col"></a></p>
+<h1>%o-col-*</h1>
+<p>%o-col-* placeholders, where <code>*</code> is
+the number of columns from 1-12
+see also <a href="#o-span">=o-span</a>
+<a name="o-generate-grid-classes"></a></p>
+<h1>=o-generate-grid-classes</h1>
+<p>Use this mixin if you'd prefer to generate static bootstrap-style
+<code>.o-grid</code> and <code>o-col-*</code> (<code>.o-col-1</code> through <code>.o-col-12</code>)
+classes.</p>
+</div><div class='doc'>
+<p><a name="o-loader"></a></p>
+<h1>=o-loader</h1>
 <p>a pure css (and atypical) animated loader; implemented
 as a mixin to keep keyframes out of the final output if the
 loader is not being used.</p>
 </div><div class='doc'>
-<a name='mixins/o--'></a>
-<h2>o--</h2>
-<p>shorthand for silent @extend (do not pass <code>%</code> with $name)</p>
+<p><a name="o-as-percent"></a></p>
+<h1>o-as-percent($number)</h1>
+<p>Simply add a <strong>%</strong> symbol to a unit (does not perform decimal conversion).</p>
 </div><div class='doc'>
-<a name='mixins/o-x'></a>
-<h2>o-x</h2>
-<p>shorthand for normal @extend (do not pass <code>.</code> with $name)</p>
+<p><a name="o-golden-ratio"></a></p>
+<h1>o-golden-ratio($number: 100, $scale: 1)</h1>
+<p>get the golden ratio of <code>$number</code> recursively scaled
+<code>$scale</code> times. A scale setting less then 1 will return the smaller portion.</p>
+<h3>Example</h3>
+<pre><code class="lang-sass"><span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>,  <span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">//=&gt; 48.54102</span>
+<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>,  <span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">//=&gt; 78.54102</span>
+<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>, -<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">//=&gt; 18.54102</span>
+<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>, -<span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">//=&gt; 11.45898</span>
+</code></pre>
+<p>see related pen at <a href="http://codepen.io/Lokua/pen/JoRWRz/?editors=110">http://codepen.io/Lokua/pen/JoRWRz/?editors=110</a></p>
+</div><div class='doc'>
+<p><a name="o-grayscale"></a></p>
+<h1>o-grayscale($value: 127, $alpha: 1)</h1>
+<p>Create a grayscale color range 0-127 with optional opacity
+see related pen at [http://codepen.io/Lokua/pen/zxKQWG?editors=110)</p>
+</div><div class='doc'>
+<p><a name="o-random-color"></a></p>
+<h1>o-random-color($random-alpha: false)</h1>
+</div><div class='doc'>
+<p><a name="o-strip-unit"></a></p>
+<h1>o-strip-unit($number)</h1>
+<p>see <a href="http://stackoverflow.com/a/12335841/2416000">http://stackoverflow.com/a/12335841/2416000</a></p>
+</div><div class='doc'>
+<p><a name="o--"></a></p>
+<h1>=o--($klass)</h1>
+<p>Shorthand for silent @extend (do not pass <code>%</code> with $klass).
+Only useful with <strong>.sass</strong> syntax, as a <strong>.scss</strong>
+<code>@include o--(.class-to-extend)</code> defeats the purpose</p>
+</div><div class='doc'>
+<p><a name="o-center"></a></p>
+<h1>=o-center</h1>
+<p>A symantic shorthand for <code>margin: 0 auto;</code></p>
+</div><div class='doc'>
+<p><a name="o-clearfix_mixin"></a></p>
+<h1>=o-clearfix</h1>
+<p>Not sure why I've included this mixin, it is better
+to extend <a href="#o-clearfix">%o-clearfix</a> to avoid redundancy.</p>
+</div><div class='doc'>
+<p><a name="o-emboss"></a></p>
+<h1>=o-emboss($radius: 0, $top-opacity: 0.3, $bottom-opacity: 0.25, $bg-opacity: 0.2)</h1>
+<p>Under construction. This current version is only suitable for dark layouts.</p>
+</div><div class='doc'>
+<p><a name="o-horizontal-nav"></a></p>
+<h1>=o-horizontal-nav($margin: 0, $padding: 0)</h1>
+<p>see related pen at <a href="http://codepen.io/Lokua/pen/JoRWRz/?editors=110">http://codepen.io/Lokua/pen/JoRWRz/?editors=110</a></p>
+</div><div class='doc'>
+<p><a name="o-list-unstyled"></a></p>
+<h1>=o-list-unstyled</h1>
+</div><div class='doc'>
+<p><a name="o-size"></a></p>
+<h1>=o-size($width, $height: $width)</h1>
+<p>(hardly a) shorthand for width and height in one line.
+When used with only one arg, a square is produced.</p>
+</div><div class='doc'>
+<p><a name="o-underline-text-on-hover"></a></p>
+<h1>=o-underline-text-on-hover($color: #000, $speed: 0.3s)</h1>
+<p>Animated text underline.
+If using with an <code>a</code> element, be sure to set
+<code>text-decoration: none;</code> on the element and its <code>:hover</code></p>
+</div><div class='doc'>
+<p><a name="o-x"></a></p>
+<h1>=o-x($klass)</h1>
+<p>Shorthand for normal @extend (do not pass <code>.</code> with $klass)
+Only useful with <strong>.sass</strong> syntax, as a <strong>.scss</strong>
+<code>@include o--(.class-to-extend)</code> defeats the purpose</p>
 </div>
         </div>
       </div>

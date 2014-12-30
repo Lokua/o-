@@ -1,10 +1,10 @@
 {
   "name": "o-",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "sass framework",
   "main": "none",
   "scripts": {
-    "gen": "node bin/gen.js"
+    "gen": "node bin/gen.js && node bin/gendoc.js"
   },
   "directories": {
     "test": "test"

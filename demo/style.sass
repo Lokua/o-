@@ -1,5 +1,9 @@
 @import ../o-
 
+$main-color: #FF3505
+// $code-font: monaco, consolas, menlo, monospaced
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
+
 *,
 *:before,
 *:after
@@ -7,7 +11,7 @@
   margin: 0
 
 body
-  background: #eee
+  background: change-color($main-color, $alpha: 0.044)
   font-family: verdana, sans-serif
   font-size: 14px
 
@@ -27,8 +31,6 @@ body
   border-right: o-grayscale(127, 0.25)
   ul
     +o-list-unstyled
-    // padding: 16px
-    // background: #fff
 
 #content
   +o--(o-col-9)
@@ -38,3 +40,21 @@ body
   padding: 16px
   margin-bottom: 32px
   border: 1px solid o-grayscale(127, 0.25)
+  > p:first-child
+    display: none
+
+.markdown-body
+  h1
+    margin: 0 0 12px 0
+    color: $main-color
+  .doc h1
+    font-family: $code-font
+    font-size: 20px
+
+a, 
+.markdown-body a
+  +o-underline-text-on-hover($main-color)
+  color: $main-color
+  &:link, &:hover, &:active
+    color: $main-color
+    text-decoration: none

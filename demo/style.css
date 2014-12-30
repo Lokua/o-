@@ -12,9 +12,10 @@
   width: 25%;
   float: left;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   #sidebar {
     width: 100%;
+    float: left;
   }
 }
 
@@ -22,9 +23,10 @@
   width: 75%;
   float: left;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   #content {
     width: 100%;
+    float: left;
   }
 }
 
@@ -32,9 +34,10 @@
   width: 100%;
   float: left;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   #main-header {
     width: 100%;
+    float: left;
   }
 }
 
@@ -46,7 +49,7 @@
 }
 
 body {
-  background: #eee;
+  background: rgba(255, 53, 5, 0.044);
   font-family: verdana, sans-serif;
   font-size: 14px;
 }
@@ -72,6 +75,50 @@ body {
   padding: 16px;
   margin-bottom: 32px;
   border: 1px solid rgba(127, 127, 127, 0.25);
+}
+.doc > p:first-child {
+  display: none;
+}
+
+.markdown-body h1 {
+  margin: 0 0 12px 0;
+  color: #FF3505;
+}
+.markdown-body .doc h1 {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 20px;
+}
+
+a,
+.markdown-body a {
+  position: relative;
+  text-decoration: none;
+  color: #FF3505;
+}
+a:before,
+.markdown-body a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #FF3505;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before,
+.markdown-body a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+a:link, a:hover, a:active,
+.markdown-body a:link,
+.markdown-body a:hover,
+.markdown-body a:active {
+  color: #FF3505;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

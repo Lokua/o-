@@ -1,5 +1,9 @@
 // ---
-// shorthand for normal @extend (do not pass `.` with $name)
+// <a name="o-x"></a>
+// # =o-x($klass)
+// Shorthand for normal @extend (do not pass `.` with $klass)
+// Only useful with __.sass__ syntax, as a __.scss__
+// `@include o--(.class-to-extend)` defeats the purpose
 // ---
-=o-x($name)
-  @extend .#{$name}
+=o-x($klass)
+  @extend .#{$klass}
