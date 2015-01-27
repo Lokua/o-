@@ -25,7 +25,7 @@ npm install o- --save-dev
 ```
 
 Refer to the API documentation for placeholder, 
-function, and mixin specifics located at [./demo/index.html](./demo/index.html)
+function, and mixin specifics located at [http://lokua.github.io/o-](http://lokua.github.io/o-)
 
 ## License
 [MIT][1]
