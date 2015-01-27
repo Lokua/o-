@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           layout: false
         },
         files: {
-          'demo/index.html': 'demo/index.jade'
+          'docs/index.html': 'docs/index.jade'
         }
       }
     },
@@ -36,24 +36,24 @@ module.exports = function(grunt) {
     },
 
     sass: {
-      demo: {
+      docs: {
         options: {
           style: 'expanded'
         },
         files: {
-          'demo/style.css': 'demo/style.sass'
+          'docs/style.css': 'docs/style.sass'
         }
       }
     },
 
     watch: {
       jade: { 
-        files: ['demo/*.jade'],
+        files: ['docs/*.jade'],
         tasks: ['jade:dev']
       },
       sass: {
-        files: ['lib/**/*.sass', 'demo/*.sass'],
-        tasks: ['exec', 'sass:demo']
+        files: ['lib/**/*.sass', 'docs/*.sass'],
+        tasks: ['exec', 'sass:docs']
       }
     }
 

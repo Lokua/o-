@@ -7,10 +7,10 @@ var fs = require('fs-extra'),
     Remarkable = require('remarkable');
 
 var libdir,  // ../lib
-    demodir, // ../demo
+    docsdir, // ../docs
     dirs,    // ../lib/{dir}
     docs,    // each doc in each ../lib/{dir}/{file}
-    list,    // ../demo/_list.jade (navigation)
+    list,    // ../docs/_list.jade (navigation)
     md;      // markdown compiler
 
 // --- start 
@@ -20,8 +20,8 @@ write();
 // --- end 
 
 function init() {
-  libdir = path.resolve(__dirname + path.sep + path.normalize('../lib'));
-  demodir = path.resolve(__dirname + path.sep + path.normalize('../demo'));
+  libdir  = path.resolve(__dirname + path.sep + path.normalize('../lib'));
+  docsdir = path.resolve(__dirname + path.sep + path.normalize('../docs'));
   dirs = fs.readdirSync(libdir);
   docs = [];
   list = [];
@@ -95,12 +95,12 @@ function parse() {
 
 
 function write() {
-  // ../demo/__DOCTEST.html
-  var outfile = demodir + path.sep + '_list.jade';
+  // ../docs/__DOCTEST.html
+  var outfile = docsdir + path.sep + '_list.jade';
   fs.writeFileSync(outfile, 'ul\n' + list.join(''));
   console.log('File written to ' + outfile);  
-  // ../demo/__DOCTEST.html
-  outfile = demodir + path.sep + '_content.html';
+  // ../docs/__DOCTEST.html
+  outfile = docsdir + path.sep + '_content.html';
   fs.writeFileSync(outfile, md.render(docs.join('')));
   console.log('File written to ' + outfile);
 }

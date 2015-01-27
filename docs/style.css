@@ -49,9 +49,10 @@
 }
 
 body {
-  background: rgba(255, 53, 5, 0.044);
+  background: #FD5200;
   font-family: verdana, sans-serif;
   font-size: 14px;
+  color: #ddd;
 }
 
 .inner {
@@ -71,29 +72,35 @@ body {
 }
 
 .doc {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.0125);
   padding: 16px;
   margin-bottom: 32px;
   border: 1px solid rgba(127, 127, 127, 0.25);
 }
 .doc > p:first-child {
-  display: none;
+  height: 0px;
+  width: 0px;
+  display: inline;
 }
 
 .markdown-body h1 {
   margin: 0 0 12px 0;
-  color: #FF3505;
+  color: yellow;
 }
 .markdown-body .doc h1 {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 20px;
 }
 
+.markdown-body * {
+  color: #fff;
+}
+
 a,
 .markdown-body a {
   position: relative;
   text-decoration: none;
-  color: #FF3505;
+  color: yellow;
 }
 a:before,
 .markdown-body a:before {
@@ -103,7 +110,7 @@ a:before,
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #FF3505;
+  background-color: #fff;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -117,8 +124,12 @@ a:link, a:hover, a:active,
 .markdown-body a:link,
 .markdown-body a:hover,
 .markdown-body a:active {
-  color: #FF3505;
+  color: yellow;
   text-decoration: none;
+}
+a:before,
+.markdown-body a:before {
+  content: " ";
 }
 
 /*# sourceMappingURL=style.css.map */

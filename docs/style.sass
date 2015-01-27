@@ -1,7 +1,7 @@
 @import ../o-
 
-$main-color: #FF3505
-// $code-font: monaco, consolas, menlo, monospaced
+$main-color: #fff
+$link-color: yellow
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
 
 *,
@@ -11,9 +11,10 @@ $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
   margin: 0
 
 body
-  background: change-color($main-color, $alpha: 0.044)
+  background: #FD5200
   font-family: verdana, sans-serif
   font-size: 14px
+  color: #ddd
 
 .inner
   padding: 16px 
@@ -36,25 +37,33 @@ body
   +o--(o-col-9)
 
 .doc
-  background: #fff
+  background: rgba(0,0,0,0.0125)
   padding: 16px
   margin-bottom: 32px
   border: 1px solid o-grayscale(127, 0.25)
   > p:first-child
-    display: none
+    height: 0px
+    width: 0px
+    display: inline
 
 .markdown-body
   h1
     margin: 0 0 12px 0
-    color: $main-color
+    color: $link-color
   .doc h1
     font-family: $code-font
     font-size: 20px
 
+.markdown-body *
+  color: $main-color
+
 a, 
 .markdown-body a
   +o-underline-text-on-hover($main-color)
-  color: $main-color
+  color: $link-color
   &:link, &:hover, &:active
-    color: $main-color
-    text-decoration: none
+    color: $link-color
+    text-decoration: none 
+  &:before
+    content: ' '
+
