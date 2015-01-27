@@ -48,11 +48,21 @@
   margin: 0;
 }
 
+.z {
+  position: absolute;
+  top: 0;
+}
+
 body {
-  background: #FD5200;
-  font-family: verdana, sans-serif;
-  font-size: 14px;
-  color: #ddd;
+  background: #3483bb;
+  font-family: Georgia;
+  font-size: 18px;
+  color: #eee;
+}
+
+h1#banner {
+  font-size: 156px;
+  font-family: Georgia;
 }
 
 .inner {
@@ -70,12 +80,14 @@ body {
   list-style: none;
   padding-left: 0;
 }
+#sidebar a {
+  margin: 4px;
+}
 
 .doc {
-  background: rgba(0, 0, 0, 0.0125);
+  background: rgba(0, 0, 0, 0.125);
   padding: 16px;
   margin-bottom: 32px;
-  border: 1px solid rgba(127, 127, 127, 0.25);
 }
 .doc > p:first-child {
   height: 0px;
@@ -83,53 +95,66 @@ body {
   display: inline;
 }
 
-.markdown-body h1 {
-  margin: 0 0 12px 0;
-  color: yellow;
+h1, h2, h3, h4, h5, h6 {
+  margin: 16px 0;
 }
-.markdown-body .doc h1 {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+.doc h1 {
+  color: #fff;
   font-size: 20px;
 }
 
-.markdown-body * {
-  color: #fff;
+p {
+  margin: 8px 0;
 }
 
-a,
-.markdown-body a {
+blockquote {
+  color: #ddd;
+  margin-left: 16px;
+}
+
+a {
   position: relative;
   text-decoration: none;
-  color: yellow;
+  color: #fff;
 }
-a:before,
-.markdown-body a:before {
+a:before {
   content: "";
   position: absolute;
   width: 100%;
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #eee;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
-a:hover:before,
-.markdown-body a:hover:before {
+a:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
-a:link, a:hover, a:active,
-.markdown-body a:link,
-.markdown-body a:hover,
-.markdown-body a:active {
-  color: yellow;
+a:link, a:hover, a:active {
+  color: #fff;
   text-decoration: none;
 }
-a:before,
-.markdown-body a:before {
+a:before {
   content: " ";
+}
+
+code {
+  padding: 0 3px;
+  color: #ddd;
+  background: rgba(0, 0, 0, 0.025);
+}
+
+pre {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.025);
+}
+
+pre code {
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

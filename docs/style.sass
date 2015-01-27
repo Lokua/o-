@@ -1,8 +1,11 @@
 @import ../o-
 
-$main-color: #fff
-$link-color: yellow
+$main-color: #eee
+$gray: #ddd
+$link-color: #fff
+$background-color: rgb(52, 131, 187)
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
+$font: Georgia
 
 *,
 *:before,
@@ -10,11 +13,22 @@ $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
   box-sizing: border-box
   margin: 0
 
+.z 
+  position: absolute
+  top: 0
+
 body
-  background: #FD5200
-  font-family: verdana, sans-serif
-  font-size: 14px
-  color: #ddd
+  background: $background-color
+  // font-family: verdana, sans-serif
+  font-family: $font
+  font-size: 18px
+  color: $main-color
+  // background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYV2P8WsUlyUAEYAQp5G779hyfWpAaGirE5VaQs1CsJlrhAHmGiPBmAADbTDe/DCSBLQAAAABJRU5ErkJggg==) repeat
+  // background-attachment: fixed
+
+h1#banner
+  font-size: 156px
+  font-family: $font
 
 .inner
   padding: 16px 
@@ -32,33 +46,38 @@ body
   border-right: o-grayscale(127, 0.25)
   ul
     +o-list-unstyled
+  a
+    margin: 4px
 
 #content
   +o--(o-col-9)
 
 .doc
-  background: rgba(0,0,0,0.0125)
+  background: rgba(0,0,0,0.125)
   padding: 16px
   margin-bottom: 32px
-  border: 1px solid o-grayscale(127, 0.25)
+  // border: 1px solid o-grayscale(127, 0.25)
   > p:first-child
     height: 0px
     width: 0px
     display: inline
 
-.markdown-body
-  h1
-    margin: 0 0 12px 0
-    color: $link-color
-  .doc h1
-    font-family: $code-font
-    font-size: 20px
+h1, h2, h3, h4, h5, h6
+  margin: 16px 0
 
-.markdown-body *
-  color: $main-color
+.doc h1
+  color: $link-color
+  // font-family: $code-font
+  font-size: 20px
+
+p
+  margin: 8px 0
+
+blockquote
+  color: $gray
+  margin-left: 16px
 
 a, 
-.markdown-body a
   +o-underline-text-on-hover($main-color)
   color: $link-color
   &:link, &:hover, &:active
@@ -66,4 +85,15 @@ a,
     text-decoration: none 
   &:before
     content: ' '
+
+code
+  padding: 0 3px
+  color: $gray
+  background: rgba(0,0,0,0.025)
+pre
+  padding: 16px
+  background: rgba(0,0,0,0.025)
+pre code
+  background: transparent
+
 
