@@ -48,12 +48,12 @@ Note the jade example, this structure (including the label) is a must.</p>
 <h1>%o-grid</h1>
 <p>Generic grid container with 100% width and clearfix extension
 <a id="o-span"></a></p>
-<h1>=o-span($number)</h1>
+<h1>=o-span($number, $float: left)</h1>
 <p>Dynamically add <code>$number</code> of columns to an element.
 The o-grid is based on a 12 column grid with no gutters,
 By default, a media query is included to set width to 100%, or 12 columns
 on screens with 768px max which can be changed through the <code>$o-max-width-break</code> variable.
-To disable the break functionality entirely, set <code>$o-auto-break: false</code>.
+To disable the break functionality entirely, set the global <code>$o-auto-break: false</code>.
 <a id="o-col"></a></p>
 <h1>%o-col-*</h1>
 <p>%o-col-* placeholders, where <code>*</code> is

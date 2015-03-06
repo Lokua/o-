@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 var libdir = path.resolve(__dirname + path.sep + path.normalize('../lib')),
     dirs = fs.readdirSync(libdir),
     // ../lib/_main.sass
-    imports = ['// auto generated from o-/bin/generate-imports.js\n@import core\n'],
+    imports = ['// auto generated from o-/bin/gen.js\n@import core\n'],
     docs = [];
 
 // --- start the program
@@ -36,7 +36,7 @@ function parse() {
 
 function write() {
   // ../lib/_main.sass
-  var outfile = libdir + path.sep + '_main.sass'; 
+  var outfile = libdir + path.sep + '_main.sass';
   fs.writeFileSync(outfile, imports.join(''));
   console.log('File written to ' + outfile);
 }

@@ -1,4 +1,4 @@
-# o- 
+# o-
 
 ###### pronounced "Oh Dash"
 
@@ -24,11 +24,11 @@ npm install o- --save-dev
 @import path_to_node_modules/o-/o-
 ```
 
-Refer to the API documentation for placeholder, 
-function, and mixin specifics located at [http://lokua.github.io/o-](http://lokua.github.io/o-)
-
+Refer to the API documentation for placeholder,
+function, and mixin specifics located at [lokua.github.io/o-][2]
 ## License
 [MIT][1]
 
 [0]: http://sass-lang.com
 [1]: http://lokua.net/license-mit.html
+[2]: http://lokua.github.io/o-

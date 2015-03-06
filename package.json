@@ -1,6 +1,6 @@
 {
   "name": "o-",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "sass framework",
   "main": "none",
   "scripts": {
@@ -34,7 +34,8 @@
     "highlight.js": "^8.4.0",
     "load-grunt-tasks": "^1.0.0",
     "marked": "^0.3.2",
-    "remarkable": "^1.6.0"
+    "remarkable": "^1.6.0",
+    "tooly": "^0.8.0"
   },
   "dependencies": {}
 }
