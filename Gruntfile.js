@@ -61,4 +61,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('gen', ['exec']);
+  grunt.registerTask('doc', ['exec', 'jade', 'sass']);
 }

@@ -64,8 +64,15 @@ to reserve the package name. Names, structure, and implementations will surely c
 <h2 id="usage">Usage</h2>
 <pre><code class="lang-sass">@import path_to_node_modules/o-/o-
 </code></pre>
-<p>Refer to the API documentation for placeholder, 
-function, and mixin specifics located at <a href="./demo/index.html">./demo/index.html</a></p>
+<p>Refer to the API documentation for placeholder,
+function, and mixin specifics located at <a href="http://lokua.github.io/o-">lokua.github.io/o-</a></p>
+<h2 id="dev">Dev</h2>
+<p><code>npm install</code></p>
+<p>If adding a new file, run <code>bin/gen.js</code> afterwords. This will add
+the file to the sass imports list.</p>
+<p>Documentation generation is custom and housed internally. To update,
+do <code>npm run gen</code>.  After that move <code>doc/index.html</code> and 
+<code>doc/style.css</code> over to the <em>gh-pages</em> branch.</p>
 <h2 id="license">License</h2>
 <p><a href="http://lokua.net/license-mit.html">MIT</a></p>
 
@@ -120,12 +127,12 @@ Note the jade example, this structure (including the label) is a must.</p>
 <h1>%o-grid</h1>
 <p>Generic grid container with 100% width and clearfix extension
 <a id="o-span"></a></p>
-<h1>=o-span($number)</h1>
+<h1>=o-span($number, $float: left)</h1>
 <p>Dynamically add <code>$number</code> of columns to an element.
 The o-grid is based on a 12 column grid with no gutters,
 By default, a media query is included to set width to 100%, or 12 columns
 on screens with 768px max which can be changed through the <code>$o-max-width-break</code> variable.
-To disable the break functionality entirely, set <code>$o-auto-break: false</code>.
+To disable the break functionality entirely, set the global <code>$o-auto-break: false</code>.
 <a id="o-col"></a></p>
 <h1>%o-col-*</h1>
 <p>%o-col-* placeholders, where <code>*</code> is

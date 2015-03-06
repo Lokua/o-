@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
-git branch gh-pages
+grunt doc &&
+git add -A &&
+git commit &&
+git checkout gh-pages &&
+git checkout master doc/index.html &&
+git checkout master doc/style.css &&
+git commit -m "(auto) genghpages"

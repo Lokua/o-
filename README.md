@@ -26,6 +26,17 @@ npm install o- --save-dev
 
 Refer to the API documentation for placeholder,
 function, and mixin specifics located at [lokua.github.io/o-][2]
+
+## Dev
+
+`npm install`
+
+If adding a new file, run `bin/gen.js` afterwords. This will add
+the file to the sass imports list.
+
+Documentation generation is custom and housed internally; regenerate by 
+running `grunt doc`.
+
 ## License
 [MIT][1]
 
