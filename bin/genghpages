@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-grunt doc &&
-git add -A &&
-git commit &&
 git checkout gh-pages &&
 git checkout master doc/index.html &&
 git checkout master doc/style.css &&
