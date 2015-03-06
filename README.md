@@ -14,8 +14,13 @@ to reserve the package name. Names, structure, and implementations will surely c
 
 ## Install
 
+via npm
 ```bash
 npm install o- --save-dev
+```
+or through bower
+```bash
+bower install o-dash --save
 ```
 
 ## Usage
