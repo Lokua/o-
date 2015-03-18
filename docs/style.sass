@@ -1,11 +1,11 @@
 @import ../o-
 
-$main-color: #eee
-$gray: #ddd
-$link-color: #fff
-$background-color: rgb(52, 131, 187)
-$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace
-$font: Georgia
+$main-color: #444
+$gray: #888
+$link-color: #468C39
+$background-color: #fff
+$code-font: monospace
+$font: 'Times New Roman', serif
 
 *,
 *:before,
@@ -19,16 +19,15 @@ $font: Georgia
 
 body
   background: $background-color
-  // font-family: verdana, sans-serif
   font-family: $font
-  font-size: 18px
+  font-size: 16px
   color: $main-color
   // background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYV2P8WsUlyUAEYAQp5G779hyfWpAaGirE5VaQs1CsJlrhAHmGiPBmAADbTDe/DCSBLQAAAABJRU5ErkJggg==) repeat
   // background-attachment: fixed
 
 h1#banner
   font-size: 156px
-  font-family: $font
+  font-family: Georgia
 
 .inner
   padding: 16px 
@@ -53,7 +52,7 @@ h1#banner
   +o--(o-col-9)
 
 .doc
-  background: rgba(0,0,0,0.125)
+  background: rgba(0,0,0,0.025)
   padding: 16px
   margin-bottom: 32px
   // border: 1px solid o-grayscale(127, 0.25)

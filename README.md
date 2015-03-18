@@ -36,7 +36,7 @@ function, and mixin specifics located at [lokua.github.io/o-][2]
 
 `npm install`
 
-If adding a new file, run `bin/gen.js` afterwords. This will add
+If adding a new file, run `node bin/gen.js` afterwords. This will add
 the file to the sass imports list.
 
 Documentation generation is custom and housed internally; regenerate by 

@@ -25,6 +25,7 @@
               <li><a href="#o-span">=o-span</a></li>
               <li><a href="#o-col-*">%o-col-*</a></li>
               <li><a href="#o-generate-grid-classes">=o-generate-grid-classes</a></li>
+              <li><a href="#o-input-range">=o-input-range</a></li>
               <li><a href="#o-loader">=o-loader</a></li>
               <li><a href="#o-as-percent">o-as-percent</a></li>
               <li><a href="#o-golden-ratio">o-golden-ratio</a></li>
@@ -59,7 +60,11 @@ existing frameworks (bootstrap <code>@size</code> vs bourbon <code>@size</code> 
 <p>This project is in its early stage of development - published at this point
 to reserve the package name. Names, structure, and implementations will surely change; more details will follow.</p>
 <h2 id="install">Install</h2>
+<p>via npm</p>
 <pre><code class="lang-bash">npm install o- --save-dev
+</code></pre>
+<p>or through bower</p>
+<pre><code class="lang-bash">bower install o-dash --save
 </code></pre>
 <h2 id="usage">Usage</h2>
 <pre><code class="lang-sass">@import path_to_node_modules/o-/o-
@@ -68,11 +73,10 @@ to reserve the package name. Names, structure, and implementations will surely c
 function, and mixin specifics located at <a href="http://lokua.github.io/o-">lokua.github.io/o-</a></p>
 <h2 id="dev">Dev</h2>
 <p><code>npm install</code></p>
-<p>If adding a new file, run <code>bin/gen.js</code> afterwords. This will add
+<p>If adding a new file, run <code>node bin/gen.js</code> afterwords. This will add
 the file to the sass imports list.</p>
-<p>Documentation generation is custom and housed internally. To update,
-do <code>npm run gen</code>.  After that move <code>doc/index.html</code> and 
-<code>doc/style.css</code> over to the <em>gh-pages</em> branch.</p>
+<p>Documentation generation is custom and housed internally; regenerate by 
+running <code>grunt doc</code>.</p>
 <h2 id="license">License</h2>
 <p><a href="http://lokua.net/license-mit.html">MIT</a></p>
 
@@ -143,6 +147,14 @@ see also <a href="#o-span">=o-span</a>
 <p>Use this mixin if you'd prefer to generate static bootstrap-style
 <code>.o-grid</code> and <code>o-col-*</code> (<code>.o-col-1</code> through <code>.o-col-12</code>)
 classes.</p>
+</div><div class='doc'>
+<p><a id="o-input-range"></a></p>
+<h1>=o-input-range($track-color: #aaa, $knob-color: #444, $rounded: false)</h1>
+<p>Cross-browser css input[type=range], implemented as a mixin to
+enable coloring of the track and thumb, as well as rounded or square thumb option.</p>
+<p>based on
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/</p>
+<p>see example on <a href="http://codepen.io/Lokua/pen/ogaaPd">codepen</a></p>
 </div><div class='doc'>
 <p><a id="o-loader"></a></p>
 <h1>=o-loader</h1>
