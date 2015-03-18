@@ -1,3 +1,9 @@
+## [0.4.3] - 2015.03.17
+
+#### Changed
+
++ bumped version SOLELY for stupid bower version mismatch
+
 ## [0.4.2] - 2015.03.13
 
 #### Added
