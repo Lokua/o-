@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-git checkout gh-pages &&
-git checkout master doc/index.html &&
-git checkout master doc/style.css &&
-git commit -m "(auto) genghpages"
