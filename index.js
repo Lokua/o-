@@ -23,6 +23,8 @@ const functions = Object.assign({}, _functions, colorFunctions);
 mixins['o-list'] = mixins['o-list-unstyled'];
 mixins['o-hlist'] = mixins['o-horizontal-list'];
 
+functions['o-golden'] = functions['o-golden-ratio'];
+
 module.exports = { mixins, functions };
 
 function get(dir) {

@@ -144,3 +144,20 @@ p.rand3:before {
 @mixin swatch violet, o-violet(63,0.5), o-violet(255);
 @mixin swatch magenta, o-magenta(63,0.5), o-magenta(255);
 @mixin swatch gray, o-gray(63,0.5), o-gray(255);
+
+.lerp1 {
+  color: o-lerp(#ff0000, rgb(0,0,255), 0.75);
+  background: o-lerp(rgb(127,0,0), rgb(0,0,255), 0.25);
+}
+.lerp2 {
+  color: o-lerp(#ff0000, rgb(0,0,255), 0.50);
+  background: o-lerp(#ff0000, rgb(0,0,127), 0.25);
+}
+.lerp3 {
+  color: o-lerp(#ff0000, rgb(0,0,255), 0.25);
+  background: o-lerp(rgb(127,0,0), rgb(0,0,255), 0.75);
+}
+.lerp4 {
+  color: o-lerp(#ff0000, rgb(0,0,255));
+  background: o-lerp(rgb(127,0,0), rgb(0,0,127), 0.6);
+}
