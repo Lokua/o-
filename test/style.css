@@ -1,0 +1,322 @@
+
+body {
+  color: black;
+  background: white;
+  font-family: 'Droid Sans Mono';
+}
+
+body.dark {
+  color: white;
+}
+
+body.dark {
+  background: black;
+}
+
+p {
+  padding: 14px;
+}
+
+p.p1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 2px;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.66);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.66);
+  background: rgba(0, 0, 0, 0.66);
+}
+
+p.p2 {
+  border-radius: 0;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+p.p3 {
+  border-radius: 0;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+ul.hl {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 0;
+}
+
+ul.hl > li {
+  display: inline-block;
+  float: left;
+}
+
+ul.lu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box {
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+  margin: 14px;
+}
+
+.box.b1 {
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.box.b2 {
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.5);
+}
+
+.box.b3 {
+  width: 256px;
+  height: 128px;
+  box-shadow: 0px 1px 2px 1px rgba(0,63,0,0.4);
+  background: rgb(200,227,200);
+}
+
+body .g {
+  border: 1px solid black;
+}
+
+body.dark .g {
+  border: 1px solid white;
+}
+
+.grid {
+  float: left;
+  width: 100%;
+  height: 256px;
+}
+
+.grid * {
+  box-sizing: border-box;
+}
+
+.grid .g {
+  width: 100%;
+  height: 256px;
+}
+
+.grid .gl {
+  float: left;
+  width: 58.333333333333336%;
+}
+
+.grid .gr {
+  float: left;
+  width: 41.66666666666667%;
+}
+
+.a1 {
+  position: relative;
+  text-decoration: none;
+}
+
+.a1:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.a1:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.a2 {
+  position: relative;
+  text-decoration: none;
+}
+.a2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: purple;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.a2:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.a3 {
+  position: relative;
+  text-decoration: none;
+}
+.a3:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.a3:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+p.gold1 {
+  font-size: 48.54101966249685px;
+}
+
+p.gold1:before {
+  content: "48.54101966249685px";
+}
+p.gold2 {
+  font-size: 78.54101966249685px;
+}
+p.gold2:before {
+  content: "78.54101966249685px";
+}
+p.gold3 {
+  font-size: 18.541019662496847px;
+}
+p.gold3:before {
+  content: "18.541019662496847px";
+}
+p.gold4 {
+  font-size: 11.458980337503156px;
+}
+p.gold4:before {
+  content: "11.458980337503156px";
+}
+
+p.rand1:before {
+  content: "11";
+}
+p.rand2:before {
+  content: "307";
+}
+p.rand3:before {
+  content: "0.68155923898162680";
+}
+p.rand3:before {
+  content: "0.042896492532543460";
+}
+
+.swatch.red {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(63, 0, 0, 0.5);
+  color: rgba(255, 0, 0, 1);
+}
+
+.swatch.red:before {
+  content: "red rgba(63, 0, 0, 0.5) rgba(255, 0, 0, 1)";
+}
+.swatch.orange {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(63, 32, 0, 0.5);
+  color: rgba(255, 128, 0, 1);
+}
+.swatch.orange:before {
+  content: "orange rgba(63, 32, 0, 0.5) rgba(255, 128, 0, 1)";
+}
+.swatch.yellow {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(63, 63, 0, 0.5);
+  color: rgba(255, 255, 0, 1);
+}
+.swatch.yellow:before {
+  content: "yellow rgba(63, 63, 0, 0.5) rgba(255, 255, 0, 1)";
+}
+.swatch.green {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(0, 63, 0, 0.5);
+  color: rgba(0, 255, 0, 1);
+}
+.swatch.green:before {
+  content: "green rgba(0, 63, 0, 0.5) rgba(0, 255, 0, 1)";
+}
+.swatch.cyan {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(0, 63, 63, 0.5);
+  color: rgba(0, 255, 255, 1);
+}
+.swatch.cyan:before {
+  content: "cyan rgba(0, 63, 63, 0.5) rgba(0, 255, 255, 1)";
+}
+.swatch.blue {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(0, 0, 63, 0.5);
+  color: rgba(0, 0, 255, 1);
+}
+.swatch.blue:before {
+  content: "blue rgba(0, 0, 63, 0.5) rgba(0, 0, 255, 1)";
+}
+.swatch.violet {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(32, 0, 63, 0.5);
+  color: rgba(128, 0, 255, 1);
+}
+.swatch.violet:before {
+  content: "violet rgba(32, 0, 63, 0.5) rgba(128, 0, 255, 1)";
+}
+.swatch.magenta {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(63, 0, 63, 0.5);
+  color: rgba(255, 0, 255, 1);
+}
+.swatch.magenta:before {
+  content: "magenta rgba(63, 0, 63, 0.5) rgba(255, 0, 255, 1)";
+}
+.swatch.gray {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  background: rgba(63,63,63,0.5);
+  color: rgba(255,255,255,1);
+}
+.swatch.gray:before {
+  content: "gray rgba(63,63,63,0.5) rgba(255,255,255,1)";
+}

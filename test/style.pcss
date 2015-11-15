@@ -1,0 +1,146 @@
+
+$unit: 14px;
+
+$text-color: black;
+$background-color: white;
+
+$b-text-color: white;
+$b-background-color: black;
+
+body {
+  @mixin o-ab color, text-color;
+  @mixin o-ab background, background-color;
+  font-family: 'Droid Sans Mono';
+}
+
+p {
+  padding: $unit;
+  &.p1 {
+    @mixin o-ellipsis;
+    @mixin o-emboss 2px,0.66,0.66,0.66;
+  }
+  &.p2 {
+    @mixin o-emboss (
+      top-opacity: 0.05,
+      background-opacity: 0.1
+    );
+  }
+  &.p3 {
+    @mixin o-emboss;
+  }
+}
+
+ul {
+  &.hl {
+    @mixin o-horizontal-list;
+  }
+  &.lu {
+    @mixin o-list;
+  }
+}
+
+.box {
+  @mixin o-size 128px;
+  display: inline-block;
+  margin: $unit;
+  &.b1 {
+    @mixin o-minimal-box-shadow;
+  }
+  &.b2 {
+    @mixin o-minimal-box-shadow rgba(0,0,0,0.5);
+  }
+  &.b3 {
+    @mixin o-size 256px, 128px;
+    @mixin o-minimal-box-shadow (color: rgba(0,63,0,0.4));
+    background: rgb(200,227,200);
+  }
+}
+
+@mixin o-ab body .g, border, text-color, 1px solid $$;
+
+.grid {
+  @mixin o-span;
+  height: 256px;
+  * {
+    box-sizing: border-box;
+  }
+  .g {
+    @mixin o-size 100%, 256px;
+  }
+  .gl {
+    @mixin o-span 7;
+  }
+  .gr {
+    @mixin o-span (cols: 5, float: left);
+  }
+}
+
+.a1 {
+  @mixin o-underline-on-hover;
+}
+.a2 {
+  @mixin o-underline-on-hover purple;
+}
+.a3 {
+  @mixin o-underline-on-hover (color: orange);
+}
+
+p.gold1 {
+  font-size: o-golden-ratio(30px, 1);
+  &:before {
+    content: o-str(o-golden-ratio(30px, 1));
+  }
+}
+p.gold2 {
+  font-size: o-golden-ratio(30px, 2);
+  &:before {
+    content: o-str(o-golden-ratio(30px, 2));
+  }
+}
+p.gold3 {
+  font-size: o-golden-ratio(30px, -1);
+  &:before {
+    content: o-str(o-golden-ratio(30px, -1));
+  }
+}
+p.gold4 {
+  font-size: o-golden-ratio(30px, -2);
+  &:before {
+    content: o-str(o-golden-ratio(30px, -2));
+  }
+}
+
+p.rand1:before {
+  content: o-str(o-random());
+}
+p.rand2:before {
+  content: o-str(o-random(300,310));
+}
+p.rand3:before {
+  content: o-str(o-random(0,1,true));
+}
+p.rand3:before {
+  content: o-str(o-random(0,1,true,true));
+}
+
+@define-mixin swatch $class, $bg, $fg {
+  .swatch.$(class) {
+    display: inline-block;
+    @mixin o-size 256px;
+    background: $bg;
+    color: $fg;
+    &:before {
+      content: o-str($class $bg $fg);
+    }
+  }
+}
+
+@mixin swatch red, o-red(63,0.5), o-red(255);
+@mixin swatch orange, o-orange(63,0.5), o-orange(255);
+@mixin swatch yellow, o-yellow(63,0.5), o-yellow(255);
+@mixin swatch green, o-green(63,0.5), o-green(255);
+@mixin swatch cyan, o-cyan(63,0.5), o-cyan(255);
+@mixin swatch blue, o-blue(63,0.5), o-blue(255);
+@mixin swatch violet, o-violet(63,0.5), o-violet(255);
+@mixin swatch magenta, o-magenta(63,0.5), o-magenta(255);
+@mixin swatch gray, o-gray(63,0.5), o-gray(255);

@@ -2,49 +2,39 @@
 
 ###### pronounced "Oh Dash"
 
-> micro-framework for [sass][0]
+> A collection of mixins and functions for use with
+  postcss-mixins and postcss-functions
 
-## Why
+# NOTE: this branch is in its early stage
 
-Because I love to code, and wanted something simple and namespaced as to not collide with
-existing frameworks (bootstrap `@size` vs bourbon `@size` for example).
+See the `sass` branch for a stable sass version of this lib.
 
-This project is in its early stage of development - published at this point
-to reserve the package name. Names, structure, and implementations will surely change; more details will follow.
+### Mixins
 
-## Install
+Mixins can be used with positional or named arguments, but not both.
+Usage of named arguments requires that all arguments
+are wrapped within parens, but can be included in any order, and are
+completely optional.  Positional arguments must be included in the exact
+order as their signature dictates (and some mixins have different signatures
+depending on the context in which they are called).
 
-via npm
-```bash
-npm install o- --save-dev
-```
-or through bower
-```bash
-bower install o-dash --save
-```
-
-## Usage
-
-```sass
-@import path_to_node_modules/o-/o-
+Positional arguments example:
+```css
+body {
+  /* radius, top-opacity, bottom-opacity, background-opacity */
+  @mixin o-emboss 0.25, 0.5, 0.5, 0.5;
+}
 ```
 
-Refer to the API documentation for placeholder,
-function, and mixin specifics located at [lokua.github.io/o-][2]
-
-## Dev
-
-`npm install`
-
-If adding a new file, run `node bin/gen.js` afterwords. This will add
-the file to the sass imports list.
-
-Documentation generation is custom and housed internally; regenerate by 
-running `grunt doc`.
+Named arguments example:
+```css
+body {
+  @mixin o-emboss (bottom-opacity: 0.5);
+}
+```
 
 ## License
 [MIT][1]
 
-[0]: http://sass-lang.com
 [1]: http://lokua.net/license-mit.html
 [2]: http://lokua.github.io/o-
