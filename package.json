@@ -1,6 +1,6 @@
 {
   "name": "o-",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mixins and functions for use with postcss-mixins and postcss-functions",
   "main": "index.js",
   "scripts": {
