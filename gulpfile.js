@@ -9,6 +9,7 @@ const precss = require('precss');
 const syntax = require('postcss-scss');
 const stripCssComments = require('gulp-strip-css-comments');
 const functions = require('postcss-functions');
+const mix = require('postcss-color-mix');
 
 const o_ = require('./index');
 
@@ -25,6 +26,7 @@ gulp.task('css', () => {
     functions({
       functions: o_.functions
     }),
+    mix,
     autoprefixer({
       cascade: true,
       browsers: ['> 1%']

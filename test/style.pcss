@@ -161,3 +161,46 @@ p.rand3:before {
   color: o-lerp(#ff0000, rgb(0,0,255));
   background: o-lerp(rgb(127,0,0), rgb(0,0,127), 0.6);
 }
+
+$md-keys: (
+  red,
+  pink,
+  purple,
+  deep-purple,
+  indigo,
+  light-blue,
+  cyan,
+  teal,
+  green,
+  light-green,
+  lime,
+  yellow,
+  amber,
+  orange,
+  deep-orange,
+  brown,
+  grey,
+  blue-grey
+);
+
+.c {
+  font-size: 32px;
+  text-align: center;
+  border: 12px solid black;
+}
+@each $key in (red, pink, purple, deep-purple, indigo, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey) {
+  .c-$(key) {
+    background: o-mdc($key, 500);
+    color: o-mdc($key, 100);
+    border-color: o-mdc($key, 900);
+    &:after {
+      content: o-str($key);
+    }
+  }
+}
+
+@for $i from 0 to 9 {
+  .cmdc-$(i) {
+    background: o-cmdc(#ff$(i)$(i)$(i)$(i));
+  }
+}
