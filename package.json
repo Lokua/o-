@@ -4,7 +4,6 @@
   "description": "mixins and functions for use with postcss-mixins and postcss-functions",
   "main": "index.js",
   "scripts": {
-    "gen": "node bin/gen.js && node bin/gendoc.js",
     "test": "ava test/**/*.test.js"
   },
   "directories": {
@@ -28,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "6.1.0",
     "ava": "0.4.2",
+    "dox": "0.8.0",
     "gulp": "3.9.0",
     "gulp-postcss": "6.0.1",
     "gulp-rename": "1.2.2",
@@ -38,6 +38,7 @@
     "precss": "1.3.0"
   },
   "dependencies": {
+    "ava": "0.4.2",
     "chroma-js": "1.1.1",
     "levenshtein": "1.0.5",
     "material-colors": "1.0.0",
