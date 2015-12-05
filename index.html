@@ -1,252 +1,370 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>o- demo</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="main-container" class="markdown-body">
-      <div id="main-header">
-        <div class="inner">
-          <h1 id="banner">o-</h1>
-        </div>
-      </div>
-      <div id="sidebar">
-        <div class="inner">
-          <nav>
-            <ul>
-              <li><a href="#o-clearfix">%o-clearfix</a></li>
-              <li><a href="#o-nopaque">%o-nopaque</a></li>
-              <li><a href="#o-opaque">%o-opaque</a></li>
-              <li><a href="#o-v-center-child">%o-v-center-child</a></li>
-              <li><a href="#o-v-center-parent">%o-v-center-parent</a></li>
-              <li><a href="#o-checkbox">%o-checkbox</a></li>
-              <li><a href="#o-grid">%o-grid</a></li>
-              <li><a href="#o-span">=o-span</a></li>
-              <li><a href="#o-col-*">%o-col-*</a></li>
-              <li><a href="#o-generate-grid-classes">=o-generate-grid-classes</a></li>
-              <li><a href="#o-input-range">=o-input-range</a></li>
-              <li><a href="#o-loader">=o-loader</a></li>
-              <li><a href="#o-as-percent">o-as-percent</a></li>
-              <li><a href="#o-golden-ratio">o-golden-ratio</a></li>
-              <li><a href="#o-grayscale">o-grayscale</a></li>
-              <li><a href="#o-random-color">o-random-color</a></li>
-              <li><a href="#o-strip-unit">o-strip-unit</a></li>
-              <li><a href="#o--">=o--</a></li>
-              <li><a href="#o-center">=o-center</a></li>
-              <li><a href="#o-clearfix">=o-clearfix</a></li>
-              <li><a href="#o-ellipsis">=o-ellipsis</a></li>
-              <li><a href="#o-emboss">=o-emboss</a></li>
-              <li><a href="#o-horizontal-list">=o-horizontal-list</a></li>
-              <li><a href="#o-list-unstyled">=o-list-unstyled</a></li>
-              <li><a href="#o-media">=o-media</a></li>
-              <li><a href="#o-minimal-box-shadow">=o-minimal-box-shadow</a></li>
-              <li><a href="#o-size">=o-size</a></li>
-              <li><a href="#o-underline-text-on-hover">=o-underline-text-on-hover</a></li>
-              <li><a href="#o-x">=o-x</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div id="content">
-        <div class="inner"><h1 id="o-">o-</h1>
-<h6 id="pronounced-oh-dash-">pronounced &quot;Oh Dash&quot;</h6>
-<blockquote>
-<p>micro-framework for <a href="http://sass-lang.com">sass</a></p>
-</blockquote>
-<h2 id="why">Why</h2>
-<p>Because I love to code, and wanted something simple and namespaced as to not collide with
-existing frameworks (bootstrap <code>@size</code> vs bourbon <code>@size</code> for example).</p>
-<p>This project is in its early stage of development - published at this point
-to reserve the package name. Names, structure, and implementations will surely change; more details will follow.</p>
-<h2 id="install">Install</h2>
-<p>via npm</p>
-<pre><code class="lang-bash">npm install o- --save-dev
-</code></pre>
-<p>or through bower</p>
-<pre><code class="lang-bash">bower install o-dash --save
-</code></pre>
-<h2 id="usage">Usage</h2>
-<pre><code class="lang-sass">@import path_to_node_modules/o-/o-
-</code></pre>
-<p>Refer to the API documentation for placeholder,
-function, and mixin specifics located at <a href="http://lokua.github.io/o-">lokua.github.io/o-</a></p>
-<h2 id="dev">Dev</h2>
-<p><code>npm install</code></p>
-<p>If adding a new file, run <code>node bin/gen.js</code> afterwords. This will add
-the file to the sass imports list.</p>
-<p>Documentation generation is custom and housed internally; regenerate by 
-running <code>grunt doc</code>.</p>
-<h2 id="license">License</h2>
-<p><a href="http://lokua.net/license-mit.html">MIT</a></p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>O- - v0.4.3</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="O- - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>sass framework</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">O- - 0.4.3</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="color"><a href="#color">color</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="color-function"><a href="#color-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-gray" data-type="function"><a href="#color-function-o-gray">o-gray</a></li><li class="sidebar__item sassdoc__item" data-name="o-random-color" data-type="function"><a href="#color-function-o-random-color">o-random-color</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="form elements"><a href="#form elements">form elements</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="form elements-mixin"><a href="#form elements-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-checkbox" data-type="mixin"><a href="#form elements-mixin-o-checkbox">o-checkbox</a></li><li class="sidebar__item sassdoc__item" data-name="o-radio" data-type="mixin"><a href="#form elements-mixin-o-radio">o-radio</a></li><li class="sidebar__item sassdoc__item" data-name="o-range" data-type="mixin"><a href="#form elements-mixin-o-range">o-range</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="grid"><a href="#grid">grid</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="grid-variable"><a href="#grid-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-auto-break" data-type="variable"><a href="#grid-variable-o-auto-break">o-auto-break</a></li><li class="sidebar__item sassdoc__item" data-name="o-break-at" data-type="variable"><a href="#grid-variable-o-break-at">o-break-at</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="grid-placeholder"><a href="#grid-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-grid" data-type="placeholder"><a href="#grid-placeholder-o-grid">o-grid</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="grid-mixin"><a href="#grid-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-span" data-type="mixin"><a href="#grid-mixin-o-span">o-span</a></li><li class="sidebar__item sassdoc__item" data-name="o-generate-grid-classes" data-type="mixin"><a href="#grid-mixin-o-generate-grid-classes">o-generate-grid-classes</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-clearfix" data-type="placeholder"><a href="#undefined-placeholder-o-clearfix">o-clearfix</a></li><li class="sidebar__item sassdoc__item" data-name="o-nopaque" data-type="placeholder"><a href="#undefined-placeholder-o-nopaque">o-nopaque</a></li><li class="sidebar__item sassdoc__item" data-name="o-opaque" data-type="placeholder"><a href="#undefined-placeholder-o-opaque">o-opaque</a></li><li class="sidebar__item sassdoc__item" data-name="o-v-center-child" data-type="placeholder"><a href="#undefined-placeholder-o-v-center-child">o-v-center-child</a></li><li class="sidebar__item sassdoc__item" data-name="o-v-center-parent" data-type="placeholder"><a href="#undefined-placeholder-o-v-center-parent">o-v-center-parent</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-input-range" data-type="mixin"><a href="#undefined-mixin-o-input-range">o-input-range <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-border-box" data-type="mixin"><a href="#undefined-mixin-o-border-box">o-border-box</a></li><li class="sidebar__item sassdoc__item" data-name="o-box-shadow" data-type="mixin"><a href="#undefined-mixin-o-box-shadow">o-box-shadow</a></li><li class="sidebar__item sassdoc__item" data-name="o-minimal-box-shadow" data-type="mixin"><a href="#undefined-mixin-o-minimal-box-shadow">o-minimal-box-shadow <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-center" data-type="mixin"><a href="#undefined-mixin-o-center">o-center</a></li><li class="sidebar__item sassdoc__item" data-name="o-ellipsis" data-type="mixin"><a href="#undefined-mixin-o-ellipsis">o-ellipsis</a></li><li class="sidebar__item sassdoc__item" data-name="o-emboss" data-type="mixin"><a href="#undefined-mixin-o-emboss">o-emboss</a></li><li class="sidebar__item sassdoc__item" data-name="o-horizontal-list" data-type="mixin"><a href="#undefined-mixin-o-horizontal-list">o-horizontal-list</a></li><li class="sidebar__item sassdoc__item" data-name="o-hlist" data-type="mixin"><a href="#undefined-mixin-o-hlist">o-hlist <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-list-unstyled" data-type="mixin"><a href="#undefined-mixin-o-list-unstyled">o-list-unstyled</a></li><li class="sidebar__item sassdoc__item" data-name="o-unstyled-list" data-type="mixin"><a href="#undefined-mixin-o-unstyled-list">o-unstyled-list</a></li><li class="sidebar__item sassdoc__item" data-name="o-size" data-type="mixin"><a href="#undefined-mixin-o-size">o-size</a></li><li class="sidebar__item sassdoc__item" data-name="o-square" data-type="mixin"><a href="#undefined-mixin-o-square">o-square</a></li><li class="sidebar__item sassdoc__item" data-name="o-underline-on-hover" data-type="mixin"><a href="#undefined-mixin-o-underline-on-hover">o-underline-on-hover</a></li><li class="sidebar__item sassdoc__item" data-name="o-underline-text-on-hover" data-type="mixin"><a href="#undefined-mixin-o-underline-text-on-hover">o-underline-text-on-hover <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-as-percent" data-type="function"><a href="#undefined-function-o-as-percent">o-as-percent</a></li><li class="sidebar__item sassdoc__item" data-name="o-golden-ratio" data-type="function"><a href="#undefined-function-o-golden-ratio">o-golden-ratio</a></li><li class="sidebar__item sassdoc__item" data-name="o-golden" data-type="function"><a href="#undefined-function-o-golden">o-golden <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-grey" data-type="function"><a href="#undefined-function-o-grey">o-grey <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-grayscale" data-type="function"><a href="#undefined-function-o-grayscale">o-grayscale <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-greyscale" data-type="function"><a href="#undefined-function-o-greyscale">o-greyscale <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-gray-scale" data-type="function"><a href="#undefined-function-o-gray-scale">o-gray-scale <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-grey-scale" data-type="function"><a href="#undefined-function-o-grey-scale">o-grey-scale <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-rand-color" data-type="function"><a href="#undefined-function-o-rand-color">o-rand-color <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li><li class="sidebar__item sassdoc__item" data-name="o-strip-unit" data-type="function"><a href="#undefined-function-o-strip-unit">o-strip-unit</a></li><li class="sidebar__item sassdoc__item" data-name="o-strip" data-type="function"><a href="#undefined-function-o-strip">o-strip <span class="sidebar__annotation sidebar__annotation--alias">alias</span></a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="o-phi" data-type="variable"><a href="#undefined-variable-o-phi">o-phi</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="color"><div class="container">color</div></h1><section class="main__sub-section" id="color-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="color-function-o-gray"><h3 class="item__heading"><a class="item__name" href="#function-o-gray">o-gray</a> <span class="item__aliased">(aliased as <a href="#function-o-grey"><code>o-grey</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-gray($value: 50, $alpha: 1) { 
+  $x: round(($value / 100) * 255);
+  @return rgba($x, $x, $x, $alpha);
+ }" data-collapsed="@function o-gray($value: 50, $alpha: 1) { ... }"><code>@function o-gray($value: 50, $alpha: 1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Create a grayscale color range 0-100 with optional alpha value</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>range [0, 100]</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>50</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$alpha</code></th><td data-label="desc"><p>range [0, 1]</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code> &mdash;<p>rgba color</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-o-grey"><code>o-grey</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#function-o-grayscale"><code>o-grayscale</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#function-o-greyscale"><code>o-greyscale</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#function-o-gray-scale"><code>o-gray-scale</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#function-o-grey-scale"><code>o-grey-scale</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></li></ul></section><section class="main__item container item" id="color-function-o-random-color"><h3 class="item__heading"><a class="item__name" href="#function-o-random-color">o-random-color</a> <span class="item__aliased">(aliased as <a href="#function-o-rand-color"><code>o-rand-color</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-random-color($alpha: false) { 
+  @if ($alpha == true) {
+    @return rgba(random(256)-1, random(256)-1, random(256)-1, random(100) / 100);
+  }
+  @return rgb(random(256)-1, random(256)-1, random(256)-1);
+ }" data-collapsed="@function o-random-color($alpha: false) { ... }"><code>@function o-random-color($alpha: false) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Get a random rgb[a] color</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$alpha</code></th><td data-label="desc"><p>if true, randomize the alpha value in addition to the rgb</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Color</code> &mdash;<p>rgb or rgba if <code>$alpha</code> is true</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-o-rand-color"><code>o-rand-color</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="form elements"><div class="container">form elements</div></h1><section class="main__sub-section" id="form elements-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="form elements-mixin-o-checkbox"><h3 class="item__heading"><a class="item__name" href="#mixin-o-checkbox">o-checkbox</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-checkbox($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%), $border-radius: 0) { 
 
-        </div>
-        <div class="inner"><div class='doc'>
-<p><a id="o-clearfix"></a></p>
-<h1>%o-clearfix</h1>
-<p>yes, <strong>o-</strong> has a clearfix too!</p>
-</div><div class='doc'>
-<p><a id="o-nopaque"> </a></p>
-<h1>%o-nopaque</h1>
-<p><strong>nopaque</strong> as in &quot;no opacity&quot;</p>
-</div><div class='doc'>
-<p><a id="o-opaque"> </a></p>
-<h1>%o-opaque</h1>
-<p>maximum opacity</p>
-</div><div class='doc'>
-<p><a id="o-v-center-child"> </a></p>
-<h1>%o-v-center-child</h1>
-<p>Center an element that is a direct descendent of an element
-that extends <code>%o-v-center-parent</code>.</p>
-<p>see <a href="#%25o-v-center-parent">%o-v-center-parent</a> <br>
-see related pen at <a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></p>
-</div><div class='doc'>
-<p><a id="o-v-center-parent"> </a></p>
-<h1>%o-v-center-parent</h1>
-<p>Container for vertically centering child elements.
-To comply, child elements must have <code>vertical-align: middle;</code> or you
-can simply <code>@extend %o-v-center-child</code>.
-Note that %o-center-parent also has <code>vertical-align: middle</code>, so parents
-can be nested.</p>
-<p>see <a href="#%25o-v-center-child">%o-v-center-child</a> <br>
-see related pen at <a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></p>
-</div><div class='doc'>
-<p><a id="o-checkbox"></a></p>
-<h1>%o-checkbox</h1>
-<p>Creates a wrapper and uniform, no-frills checkbox.
-Note the jade example, this structure (including the label) is a must.</p>
-<h2>Example</h2>
-<h3>Sass</h3>
-<pre><code class="lang-sass"><span class="hljs-class">.checkbox</span>
-  +<span class="hljs-function"><span class="hljs-title">o--</span><span class="hljs-params">(o-checkbox)</span></span> <span class="hljs-comment">// using o-'s silent @extend mixin</span>
-</code></pre>
-<h3>Jade</h3>
-<pre><code class="lang-jade"><span class="hljs-class">.checkbox</span>
-  input#<span class="hljs-function"><span class="hljs-title">my-checkbox</span><span class="hljs-params">(type=<span class="hljs-string">'checkbox'</span>)</span></span>  
-  <span class="hljs-function"><span class="hljs-title">label</span><span class="hljs-params">(for=<span class="hljs-string">'my-checkbox'</span>)</span></span> Check Me
-</code></pre>
-<p>based on <a href="http://codepen.io/CreativeJuiz/pen/zqKtp">this pen</a></p>
-</div><div class='doc'>
-<p><a id="o-grid"></a></p>
-<h1>%o-grid</h1>
-<p>Generic grid container with 100% width and clearfix extension
-<a id="o-span"></a></p>
-<h1>=o-span($number, $float: left)</h1>
-<p>Dynamically add <code>$number</code> of columns to an element.
-The o-grid is based on a 12 column grid with no gutters,
-By default, a media query is included to set width to 100%, or 12 columns
-on screens with 768px max which can be changed through the <code>$o-max-width-break</code> variable.
-To disable the break functionality entirely, set the global <code>$o-auto-break: false</code>.
-<a id="o-col"></a></p>
-<h1>%o-col-*</h1>
-<p>%o-col-* placeholders, where <code>*</code> is
-the number of columns from 1-12
-see also <a href="#o-span">=o-span</a>
-<a id="o-generate-grid-classes"></a></p>
-<h1>=o-generate-grid-classes</h1>
-<p>Use this mixin if you'd prefer to generate static bootstrap-style
-<code>.o-grid</code> and <code>o-col-*</code> (<code>.o-col-1</code> through <code>.o-col-12</code>)
-classes.</p>
-</div><div class='doc'>
-<p><a id="o-input-range"></a></p>
-<h1>=o-input-range($track-color: #aaa, $knob-color: #444, $rounded: false)</h1>
-<p>Cross-browser css input[type=range], implemented as a mixin to
-enable coloring of the track and thumb, as well as rounded or square thumb option.</p>
-<p>based on
-https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/</p>
-<p>see example on <a href="http://codepen.io/Lokua/pen/ogaaPd">codepen</a></p>
-</div><div class='doc'>
-<p><a id="o-loader"></a></p>
-<h1>=o-loader</h1>
-<p>a pure css (and atypical) animated loader; implemented
-as a mixin to keep keyframes out of the final output if the
-loader is not being used.</p>
-</div><div class='doc'>
-<p><a id="o-as-percent"></a></p>
-<h1>o-as-percent($number)</h1>
-<p>Simply add a <strong>%</strong> symbol to a unit (does not perform decimal conversion).</p>
-</div><div class='doc'>
-<p><a id="o-golden-ratio"></a></p>
-<h1>o-golden-ratio($number: 100, $scale: 1)</h1>
-<p>get the golden ratio of <code>$number</code> recursively scaled
-<code>$scale</code> times. A scale setting less then 1 will return the smaller portion.</p>
-<h3>Example</h3>
-<pre><code class="lang-sass"><span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>,  <span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">//=&gt; 48.54102</span>
-<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>,  <span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">//=&gt; 78.54102</span>
-<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>, -<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">//=&gt; 18.54102</span>
-<span class="hljs-function"><span class="hljs-title">o-golden-ratio</span><span class="hljs-params">(<span class="hljs-number">30</span>, -<span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">//=&gt; 11.45898</span>
-</code></pre>
-<p>see related pen at <a href="http://codepen.io/Lokua/pen/JoRWRz/?editors=110">http://codepen.io/Lokua/pen/JoRWRz/?editors=110</a></p>
-</div><div class='doc'>
-<p><a id="o-grayscale"></a></p>
-<h1>o-grayscale($value: 127, $alpha: 1)</h1>
-<p>Create a grayscale color range 0-127 with optional opacity
-see related pen at <a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></p>
-</div><div class='doc'>
-<p><a id="o-random-color"></a></p>
-<h1>o-random-color($random-alpha: false)</h1>
-</div><div class='doc'>
-<p><a id="o-strip-unit"></a></p>
-<h1>o-strip-unit($number)</h1>
-<p>see <a href="http://stackoverflow.com/a/12335841/2416000">http://stackoverflow.com/a/12335841/2416000</a></p>
-</div><div class='doc'>
-<p><a id="o--"></a></p>
-<h1>=o--($klass)</h1>
-<p>Shorthand for silent @extend (do not pass <code>%</code> with $klass).
-Only useful with <strong>.sass</strong> syntax, as a <strong>.scss</strong>
-<code>@include o--(.class-to-extend)</code> defeats the purpose</p>
-</div><div class='doc'>
-<p><a id="o-center"></a></p>
-<h1>=o-center</h1>
-<p>A symantic shorthand for <code>margin: 0 auto;</code></p>
-</div><div class='doc'>
-<p><a id="o-clearfix_mixin"></a></p>
-<h1>=o-clearfix</h1>
-<p>Not sure why I've included this mixin, it is better
-to extend <a href="#o-clearfix">%o-clearfix</a> to avoid redundancy.</p>
-</div><div class='doc'>
-<p><a id="o-ellipsis"></a></p>
-<h1>=o-ellipsis</h1>
-<p>Truncate text with an ellipsis. Works best on elements with a determined height
-(not <code>auto</code> or <code>100%</code>)</p>
-</div><div class='doc'>
-<p><a id="o-emboss"></a></p>
-<h1>=o-emboss($radius: 0, $top-opacity: 0.3, $bottom-opacity: 0.25, $bg-opacity: 0.2)</h1>
-<p>Under construction. This current version is only suitable for dark layouts.</p>
-</div><div class='doc'>
-<p><a id="o-horizontal-list"></a></p>
-<h1>=o-horizontal-list($margin: 0, $padding: 0)</h1>
-<p>see related pen at <a href="http://codepen.io/Lokua/pen/JoRWRz/?editors=110">http://codepen.io/Lokua/pen/JoRWRz/?editors=110</a></p>
-</div><div class='doc'>
-<p><a id="o-list-unstyled"></a></p>
-<h1>=o-list-unstyled</h1>
-</div><div class='doc'>
-<p><a id="o-media"></a></p>
-<h1>=o-media($media)</h1>
-<p>adapted from <a href="http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32">http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32</a></p>
-</div><div class='doc'>
-<p><a id="o-minimal-box-shadow"></a></p>
-<h1>=o-minimal-box-shadow($color: rgba(0, 0, 0, 0.25))</h1>
-</div><div class='doc'>
-<p><a id="o-size"></a></p>
-<h1>=o-size($width, $height: $width)</h1>
-<p>(hardly a) shorthand for width and height in one line.
-When used with only one arg, a square is produced.</p>
-</div><div class='doc'>
-<p><a id="o-underline-text-on-hover"></a></p>
-<h1>=o-underline-text-on-hover($color: #000, $speed: 0.3s)</h1>
-<p>Animated text underline.
-If using with an <code>a</code> element, be sure to set
-<code>text-decoration: none;</code> on the element and its <code>:hover</code></p>
-</div><div class='doc'>
-<p><a id="o-x"></a></p>
-<h1>=o-x($klass)</h1>
-<p>Shorthand for normal @extend (do not pass <code>.</code> with $klass)
-Only useful with <strong>.sass</strong> syntax, as a <strong>.scss</strong>
-<code>@include o--(.class-to-extend)</code> defeats the purpose</p>
-</div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+  .#{$class} {
+
+    position: relative;
+    display: inline-block;
+
+    input[type=checkbox] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      baseline-shift: super;
+
+      &amp;:checked + label:after {
+        position: absolute;
+        top: $size * 0.125 * -1;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        content: &#39;\2713&#39;;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: $size;
+        width: $size;
+        height: $size;
+      }
+
+      &amp;:not(checked) + label {
+        content: &#39;&#39;;
+      }
+    }
+
+    label {
+      display: inline-block;
+      width: $size; height: $size;
+      color: $color;
+      background: $background;
+      border: $border;
+      border-radius: $border-radius;
+      pointer-events: none;
+    }
+
+  }
+ }" data-collapsed="@mixin o-checkbox($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%), $border-radius: 0) { ... }"><code>@mixin o-checkbox($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%), $border-radius: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Custom checkbox factory. Customizations not available through parametes can be applied to the label element child of classname <code>$class</code> as follows:</p><ul><li>Using the mixins defaults, the colors and appearence of the checkbox can be targeted via <code>.checkbox label</code>.</li><li>For the checkmark itself, target <code>.checkbox input:checked + label:after</code></li></ul><p>See the example for required markup:</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>the classname for your checkbox container</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>checkbox</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>18px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#222</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$background</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#ddd</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$border</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>2px solid lighten($color, 10%)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$border-radius</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-html"><code>&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; checked&gt;
+  &lt;label&gt;&lt;/label&gt;
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/jWOZJd?editors=110">http://codepen.io/Lokua/pen/jWOZJd?editors=110</a></li></ul></section><section class="main__item container item" id="form elements-mixin-o-radio"><h3 class="item__heading"><a class="item__name" href="#mixin-o-radio">o-radio</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-radio($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%)) { 
+
+  .#{$class} {
+    position: relative;
+    display: inline-block;
+
+    input[type=radio] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+
+      &amp;:checked + label:after {
+        $bullet-size: $size / 1.5;
+
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: $bullet-size/4;
+        left: $bullet-size/4;
+        width: $bullet-size;
+        height: $bullet-size;
+        background: $color;
+        border-radius: 50%;
+        content: &#39;&#39;;
+      }
+      
+      &amp;:not(:checked) + label:after {
+        opacity: 0;
+      }
+    }
+
+    label {
+      box-sizing: border-box;
+      display: inline-block;
+      width: $size;
+      height: $size;
+      color: $color;
+      background: $background;
+      border: $border;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  }
+ }" data-collapsed="@mixin o-radio($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%)) { ... }"><code>@mixin o-radio($class: checkbox, $size: 18px, $color: #222, $background: #ddd, $border: 2px solid lighten($color, 10%)) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Custom radio factory. Customizations not available through parameters can be applied to the label element child of classname <code>$class</code> as follows:</p><ul><li>Using the mixins defaults, the colors and appearence of the radio can be targeted via <code>.radio label</code>.</li><li>For the bullet inside the radio, target <code>.radio input:radio + label:after</code></li></ul><p>See the example for required markup:</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>the classname for your checkbox container</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>checkbox</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>18px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#222</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$background</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#ddd</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$border</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>2px solid lighten($color, 10%)</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-html"><code>&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;a&quot;/&gt;
+  &lt;label&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;a&quot;/&gt;
+  &lt;label&gt;&lt;/label&gt;
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/YwzaGe?editors=110">http://codepen.io/Lokua/pen/YwzaGe?editors=110</a></li></ul></section><section class="main__item container item" id="form elements-mixin-o-range"><h3 class="item__heading"><a class="item__name" href="#mixin-o-range">o-range</a> <span class="item__aliased">(aliased as <a href="#mixin-o-input-range"><code>o-input-range</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-range($track-color: #aaa, $knob-color: #444, $rounded: false) { 
+
+  $track-height: 2px;
+  $knob-height: 14px;
+  $knob-width: 8px;
+
+  $webkit-knob-margin-top: -3px;
+  @if ($rounded == false) {
+    $webkit-knob-margin-top: -6px;
+  }
+
+  input[type=range] {
+
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+
+    &amp;:focus {
+      outline: none;
+    }
+
+
+    &amp;::-webkit-slider-runnable-track {
+      width: 100%;
+      height: $track-height;
+      cursor: pointer;
+      animate: 0.2s;
+      background: $track-color;
+    }
+    &amp;::-webkit-slider-thumb {
+      background: $knob-color;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: $webkit-knob-margin-top;
+      @if $rounded == true {
+        border-radius: 50%;
+        height: $knob-width;
+        width: $knob-width;
+      } @else {
+        height: $knob-height;
+        width: $knob-width;
+      }
+    }
+    &amp;:focus::-webkit-slider-runnable-track {
+      background: $track-color;
+    }
+
+
+    &amp;::-moz-range-track {
+      width: 100%;
+      height: $track-height;
+      cursor: pointer;
+      animate: 0.2s;
+      background: $track-color;
+    }
+    &amp;::-moz-range-thumb {
+      border: none;
+      background: $knob-color;
+      cursor: pointer;
+      @if $rounded == true {
+        border-radius: 50%;
+        height: $knob-width;
+        width: $knob-width;
+      } @else {
+        border-radius: 0%;
+        height: $knob-height;
+        width: $knob-width;
+      }
+    }
+
+
+    &amp;::-ms-track {
+      width: 100%;
+      height: $track-height;
+      cursor: pointer;
+      animate: 0.2s;
+      background: transparent;
+      border-color: transparent;
+      border-width: $knob-width 0;
+      color: transparent;
+    }
+    &amp;::-ms-fill-lower {
+      background: $track-color;
+      border: 0px solid #000101;
+      box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+    &amp;::-ms-fill-upper {
+      background: $track-color;
+      border: 0px solid #000101;
+      box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+    &amp;::-ms-thumb {
+      box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+      border: 0px solid #000000;
+      height: 20px;
+      width: $knob-width;
+      background: $knob-color;
+      cursor: pointer;
+    }
+    &amp;:focus::-ms-fill-lower {
+      background: $track-color;
+    }
+    &amp;:focus::-ms-fill-upper {
+      background: $track-color;
+    }
+  }
+ }" data-collapsed="@mixin o-range($track-color: #aaa, $knob-color: #444, $rounded: false) { ... }"><code>@mixin o-range($track-color: #aaa, $knob-color: #444, $rounded: false) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Cross-browser css input[type=range], implemented as a mixin to enable coloring of the track and thumb, as well as rounded or square thumb option.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$track-color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#aaa</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$knob-color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#444</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$rounded</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Bool</code></td><td data-label="default"><code>false</code></td></tr></tbody></table><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/</a></li><li><a href="http://codepen.io/Lokua/pen/ogaaPd">http://codepen.io/Lokua/pen/ogaaPd</a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="grid"><div class="container">grid</div></h1><section class="main__sub-section" id="grid-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="grid-variable-o-auto-break"><h3 class="item__heading"><a class="item__name" href="#variable-o-auto-break">o-auto-break</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$o-auto-break: true;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>If true, <code>%o-col-*</code> placeholders will expand to 100% width on screens smaller than <code>$o-break-at</code></p></div><h3 class="item__sub-heading">Type</h3><p><code>{bool}</code></p><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-o-break-at"><code>o-break-at</code></a></li></ul></section><section class="main__item container item" id="grid-variable-o-break-at"><h3 class="item__heading"><a class="item__name" href="#variable-o-break-at">o-break-at</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$o-break-at: 768px;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>If <code>$o-auto-break</code> is true, sets the breakpoint at which screens smaller than will force all grid placeholders to assume full width</p></div><h3 class="item__sub-heading">Type</h3><p><code>{number}</code></p></section></section><section class="main__sub-section" id="grid-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="grid-placeholder-o-grid"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-grid">o-grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-grid { 
+  @extend %o-clearfix;
+  width: 100%;
+ }" data-collapsed="%o-grid { ... }"><code>%o-grid { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Generic grid container</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-clearfix"><code>o-clearfix</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-o-generate-grid-classes"><code>o-generate-grid-classes</code></a></li></ul></section></section><section class="main__sub-section" id="grid-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="grid-mixin-o-span"><h3 class="item__heading"><a class="item__name" href="#mixin-o-span">o-span</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-span() { 
+  width: 100 * ($cols/12) + 0%;
+  float: $float;
+ }" data-collapsed="@mixin o-span() { ... }"><code>@mixin o-span() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Dynamically add <code>$cols</code> number of columns to an element. Assumes a 12 column grid with no gutters.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="grid-mixin-o-generate-grid-classes"><h3 class="item__heading"><a class="item__name" href="#mixin-o-generate-grid-classes">o-generate-grid-classes</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-generate-grid-classes() { 
+  .o-grid {
+    @extend %o-grid;
+  }
+  @for $i from 1 through 12 {
+    .o-col-#{$i} {
+      @extend %o-col-#{$i};
+    }
+  }
+ }" data-collapsed="@mixin o-generate-grid-classes() { ... }"><code>@mixin o-generate-grid-classes() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Use this mixin if you&#39;d prefer to generate static bootstrap-style <code>.o-grid</code> and <code>o-col-*</code> (<code>.o-col-1</code> through <code>.o-col-12</code>) classes.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-grid"><code>o-grid</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="undefined-placeholder-o-clearfix"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-clearfix">o-clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-clearfix { 
+  &amp;:after {
+    content: &#39;&#39;;
+    display: table;
+    clear: both;
+  }
+ }" data-collapsed="%o-clearfix { ... }"><code>%o-clearfix { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>modern clearfix</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-grid"><code>o-grid</code></a></li></ul></section><section class="main__item container item" id="undefined-placeholder-o-nopaque"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-nopaque">o-nopaque</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-nopaque { 
+  opacity: 0;
+ }" data-collapsed="%o-nopaque { ... }"><code>%o-nopaque { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>&quot;no opacity&quot; - you can&#39;t see me</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-opaque"><code>o-opaque</code></a></li></ul></section><section class="main__item container item" id="undefined-placeholder-o-opaque"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-opaque">o-opaque</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-opaque { 
+  opacity: 1;
+ }" data-collapsed="%o-opaque { ... }"><code>%o-opaque { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Maximum opacity</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-opaque"><code>o-opaque</code></a></li></ul></section><section class="main__item container item" id="undefined-placeholder-o-v-center-child"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-v-center-child">o-v-center-child</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-v-center-child { 
+  vertical-align: middle;
+ }" data-collapsed="%o-v-center-child { ... }"><code>%o-v-center-child { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Vertically center an element that is a direct descendent of an element that extends <code>%o-v-center-parent</code>.</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-v-center-parent"><code>o-v-center-parent</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></li></ul></section><section class="main__item container item" id="undefined-placeholder-o-v-center-parent"><h3 class="item__heading"><a class="item__name" href="#placeholder-o-v-center-parent">o-v-center-parent</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%o-v-center-parent { 
+  display: table-cell;
+  vertical-align: middle;
+ }" data-collapsed="%o-v-center-parent { ... }"><code>%o-v-center-parent { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Container for vertically centering child elements. To comply, child elements must have <code>vertical-align: middle;</code> or you can simply <code>@extend %o-v-center-child</code>. Note that <code>%o-center-parent</code> also has <code>vertical-align: middle</code>, so parents can be nested.</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-o-v-center-child"><code>o-v-center-child</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/zxKQWG?editors=110">http://codepen.io/Lokua/pen/zxKQWG?editors=110</a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item item--alias item--deprecated" id="undefined-mixin-o-input-range"><h3 class="item__heading"><a class="item__name" href="#mixin-o-input-range">o-input-range</a> <span class="item__alias">(alias for <a href="#mixin-o-range"><code>o-range</code></a>)</span></h3><div class="item__deprecated"><strong>Deprecated!</strong><p>Keeping for backwards compatibility. Use <code>o-range</code> instead</p></div><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-input-range() { 
+  @return o-range($track-color, $knob-color, $rounded);
+ }" data-collapsed="@mixin o-input-range() { ... }"><code>@mixin o-input-range() { ... }</code></pre></div><p>Refer to <a href="#mixin-o-range">o-range</a>.</p></section><section class="main__item container item" id="undefined-mixin-o-border-box"><h3 class="item__heading"><a class="item__name" href="#mixin-o-border-box">o-border-box</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-border-box() { 
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+ }" data-collapsed="@mixin o-border-box() { ... }"><code>@mixin o-border-box() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Paul Irish box-sizing:border-box for errthang</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-o-box-shadow"><h3 class="item__heading"><a class="item__name" href="#mixin-o-box-shadow">o-box-shadow</a> <span class="item__aliased">(aliased as <a href="#mixin-o-minimal-box-shadow"><code>o-minimal-box-shadow</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-box-shadow($color: rgba(#000, 0.25)) { 
+  box-shadow: 0px 1px 2px 1px $color;
+ }" data-collapsed="@mixin o-box-shadow($color: rgba(#000, 0.25)) { ... }"><code>@mixin o-box-shadow($color: rgba(#000, 0.25)) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Opinionated minimal box shadow</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code>rgba(#000, 0.25)</code></td></tr></tbody></table></section><section class="main__item container item item--alias item--deprecated" id="undefined-mixin-o-minimal-box-shadow"><h3 class="item__heading"><a class="item__name" href="#mixin-o-minimal-box-shadow">o-minimal-box-shadow</a> <span class="item__alias">(alias for <a href="#mixin-o-box-shadow"><code>o-box-shadow</code></a>)</span></h3><div class="item__deprecated"><strong>Deprecated!</strong><p>Keeping for backwards compatibility. Use <code>o-box-shadow</code> instead</p></div><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-minimal-box-shadow() { 
+  @return o-box-shadow($color);
+ }" data-collapsed="@mixin o-minimal-box-shadow() { ... }"><code>@mixin o-minimal-box-shadow() { ... }</code></pre></div><p>Refer to <a href="#mixin-o-box-shadow">o-box-shadow</a>.</p></section><section class="main__item container item" id="undefined-mixin-o-center"><h3 class="item__heading"><a class="item__name" href="#mixin-o-center">o-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-center($top: 0, $bottom: $top) { 
+  margin: $top auto $bottom;
+ }" data-collapsed="@mixin o-center($top: 0, $bottom: $top) { ... }"><code>@mixin o-center($top: 0, $bottom: $top) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Symantic shorthand for <code>margin: 0 auto</code></p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$top</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bottom</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$top</code></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-o-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-o-ellipsis">o-ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-ellipsis() { 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ }" data-collapsed="@mixin o-ellipsis() { ... }"><code>@mixin o-ellipsis() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Truncate text with an ellipsis (<code>...</code>). Works best on elements with a determined height (not <code>auto</code> or <code>100%</code>)</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-o-emboss"><h3 class="item__heading"><a class="item__name" href="#mixin-o-emboss">o-emboss</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-emboss($radius: 0, $top-opacity: 0.3, $bottom-opacity: 0.25, $bg-opacity: 0.2) { 
+
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(#fff, $bottom-opacity);
+  box-shadow: inset 0 3px 3px rgba(#000, $top-opacity);
+  border-radius: $radius;
+ }" data-collapsed="@mixin o-emboss($radius: 0, $top-opacity: 0.3, $bottom-opacity: 0.25, $bg-opacity: 0.2) { ... }"><code>@mixin o-emboss($radius: 0, $top-opacity: 0.3, $bottom-opacity: 0.25, $bg-opacity: 0.2) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Provide an inset look to an element</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$top-opacity</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0.3</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bottom-opacity</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0.25</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bg-opacity</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0.2</code></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-o-horizontal-list"><h3 class="item__heading"><a class="item__name" href="#mixin-o-horizontal-list">o-horizontal-list</a> <span class="item__aliased">(aliased as <a href="#mixin-o-hlist"><code>o-hlist</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-horizontal-list() { 
+  list-style-type: none;
+  display: inline-block;
+  &gt; li {
+    display: inline-block;
+    float: left;
+  }
+ }" data-collapsed="@mixin o-horizontal-list() { ... }"><code>@mixin o-horizontal-list() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bare bones horizontal list. Note that this mixin is meant to be placed directly under a <code>ul|ol</code> or class placed directly on a <code>ul|ol</code></p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item item--alias" id="undefined-mixin-o-hlist"><h3 class="item__heading"><a class="item__name" href="#mixin-o-hlist">o-hlist</a> <span class="item__alias">(alias for <a href="#mixin-o-horizontal-list"><code>o-horizontal-list</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-hlist() { 
+  @return o-horizontal-list;
+ }" data-collapsed="@mixin o-hlist() { ... }"><code>@mixin o-hlist() { ... }</code></pre></div><p>Refer to <a href="#mixin-o-horizontal-list">o-horizontal-list</a>.</p></section><section class="main__item container item" id="undefined-mixin-o-list-unstyled"><h3 class="item__heading"><a class="item__name" href="#mixin-o-list-unstyled">o-list-unstyled</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-list-unstyled() { 
+  list-style: none;
+  padding-left: 0;
+ }" data-collapsed="@mixin o-list-unstyled() { ... }"><code>@mixin o-list-unstyled() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Barebones unstyled list</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-o-unstyled-list"><h3 class="item__heading"><a class="item__name" href="#mixin-o-unstyled-list">o-unstyled-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-unstyled-list() { 
+  @return o-list-unstyled;
+ }" data-collapsed="@mixin o-unstyled-list() { ... }"><code>@mixin o-unstyled-list() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>alias o-list-unstyled</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-o-size"><h3 class="item__heading"><a class="item__name" href="#mixin-o-size">o-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-size($width: 100%, $height: $width) { 
+  width: $width;
+  height: $height;
+ }" data-collapsed="@mixin o-size($width: 100%, $height: $width) { ... }"><code>@mixin o-size($width: 100%, $height: $width) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set width and height in one line. If height is unspecified, height will be set to the same value as <code>$width</code> (effectively making this a &quot;square&quot; function)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>100%</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$width</code></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-o-square"><h3 class="item__heading"><a class="item__name" href="#mixin-o-square">o-square</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-square($size) { 
+  @return o-size($size);
+ }" data-collapsed="@mixin o-square($size) { ... }"><code>@mixin o-square($size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Symantic alias for <code>o-size</code> with only one argument</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>single value for both width and height</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-o-underline-on-hover"><h3 class="item__heading"><a class="item__name" href="#mixin-o-underline-on-hover">o-underline-on-hover</a> <span class="item__aliased">(aliased as <a href="#mixin-o-underline-text-on-hover"><code>o-underline-text-on-hover</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-underline-on-hover($color: #000, $speed: 0.3s) { 
+  position: relative;
+  text-decoration: none;
+
+  // hide underline
+  &amp;:before {
+    content: &#39;&#39;;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+
+    // fallback unsupport anim
+    transform: scaleX(0);
+    transition: all $speed ease-in-out 0s;
+  }
+
+  // show underline
+  &amp;:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+ }" data-collapsed="@mixin o-underline-on-hover($color: #000, $speed: 0.3s) { ... }"><code>@mixin o-underline-on-hover($color: #000, $speed: 0.3s) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Animated underline most suitable for text. If using with an <code>a</code> element, be sure to set <code>text-decoration: none</code> on the element as well its <code>:hover</code> state</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background:#000; color: #fff">#000</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$speed</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0.3s</code></td></tr></tbody></table></section><section class="main__item container item item--alias item--deprecated" id="undefined-mixin-o-underline-text-on-hover"><h3 class="item__heading"><a class="item__name" href="#mixin-o-underline-text-on-hover">o-underline-text-on-hover</a> <span class="item__alias">(alias for <a href="#mixin-o-underline-on-hover"><code>o-underline-on-hover</code></a>)</span></h3><div class="item__deprecated"><strong>Deprecated!</strong><p>Keeping for backwards compatibility. Use o-underline-on-hover instead</p></div><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin o-underline-text-on-hover() { 
+  @return o-underline-on-hover($color, $speed);
+ }" data-collapsed="@mixin o-underline-text-on-hover() { ... }"><code>@mixin o-underline-text-on-hover() { ... }</code></pre></div><p>Refer to <a href="#mixin-o-underline-on-hover">o-underline-on-hover</a>.</p></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-o-as-percent"><h3 class="item__heading"><a class="item__name" href="#function-o-as-percent">o-as-percent</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-as-percent($number) { 
+  @return o-strip-unit($number) + 0%;
+ }" data-collapsed="@function o-as-percent($number) { ... }"><code>@function o-as-percent($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Simply append a <code>%</code> symbol to a unit (does not perform decimal conversion)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>$number + %</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#function-o-strip-unit"><code>o-strip-unit</code></a></li></ul></section><section class="main__item container item" id="undefined-function-o-golden-ratio"><h3 class="item__heading"><a class="item__name" href="#function-o-golden-ratio">o-golden-ratio</a> <span class="item__aliased">(aliased as <a href="#function-o-golden"><code>o-golden</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-golden-ratio($number: 100, $scale: 1) { 
+
+  $ret: $number;
+  $n: $scale;
+
+  @if ($scale &lt; $number) {
+    @while ($n &lt; 0) {
+      $ret: $ret * ($o-phi - 1);
+      $n: $n + 1;
+    }
+    @return $ret;
+  }
+
+  @if ($scale &gt; 0) {
+    @while ($n &gt; 0) {
+      $ret: $ret * $o-phi;
+      $n: $n - 1;
+    }
+    @return $ret;
+  }
+
+  @return $number;
+ }" data-collapsed="@function o-golden-ratio($number: 100, $scale: 1) { ... }"><code>@function o-golden-ratio($number: 100, $scale: 1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Get the golden ratio of <code>$number</code> recursively scaled <code>$scale</code> times. A scale setting of less then 1 will return the smaller portion.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>100</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$scale</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>The golden A as to <code>$number</code>, or C as to <code>$number</code> if <code>$scale</code> is &lt; 0</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>o-golden-ratio(30,  1) //=&gt; 48.54102
+o-golden-ratio(30,  2) //=&gt; 78.54102
+o-golden-ratio(30, -1) //=&gt; 18.54102
+o-golden-ratio(30, -2) //=&gt; 11.45898</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-o-phi"><code>o-phi</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-o-golden"><code>o-golden</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://codepen.io/Lokua/pen/JoRWRz/?editors=110">http://codepen.io/Lokua/pen/JoRWRz/?editors=110</a></li></ul></section><section class="main__item container item item--alias" id="undefined-function-o-golden"><h3 class="item__heading"><a class="item__name" href="#function-o-golden">o-golden</a> <span class="item__alias">(alias for <a href="#function-o-golden-ratio"><code>o-golden-ratio</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-golden() { 
+  @return o-golden-ratio($number, $scale);
+ }" data-collapsed="@function o-golden() { ... }"><code>@function o-golden() { ... }</code></pre></div><p>Refer to <a href="#function-o-golden-ratio">o-golden-ratio</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-grey"><h3 class="item__heading"><a class="item__name" href="#function-o-grey">o-grey</a> <span class="item__aliased">(aliased as <a href="#function-o-grayscale"><code>o-grayscale</code></a> )</span> <span class="item__alias">(alias for <a href="#function-o-gray"><code>o-gray</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-grey() { 
+  @return o-gray($value, $alpha);
+ }" data-collapsed="@function o-grey() { ... }"><code>@function o-grey() { ... }</code></pre></div><p>Refer to <a href="#function-o-gray">o-gray</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-grayscale"><h3 class="item__heading"><a class="item__name" href="#function-o-grayscale">o-grayscale</a> <span class="item__aliased">(aliased as <a href="#function-o-greyscale"><code>o-greyscale</code></a> )</span> <span class="item__alias">(alias for <a href="#function-o-grey"><code>o-grey</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-grayscale() { 
+  @return o-gray($value, $alpha);
+ }" data-collapsed="@function o-grayscale() { ... }"><code>@function o-grayscale() { ... }</code></pre></div><p>Refer to <a href="#function-o-grey">o-grey</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-greyscale"><h3 class="item__heading"><a class="item__name" href="#function-o-greyscale">o-greyscale</a> <span class="item__aliased">(aliased as <a href="#function-o-gray-scale"><code>o-gray-scale</code></a> )</span> <span class="item__alias">(alias for <a href="#function-o-grayscale"><code>o-grayscale</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-greyscale() { 
+  @return o-gray($value, $alpha);
+ }" data-collapsed="@function o-greyscale() { ... }"><code>@function o-greyscale() { ... }</code></pre></div><p>Refer to <a href="#function-o-grayscale">o-grayscale</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-gray-scale"><h3 class="item__heading"><a class="item__name" href="#function-o-gray-scale">o-gray-scale</a> <span class="item__aliased">(aliased as <a href="#function-o-grey-scale"><code>o-grey-scale</code></a> )</span> <span class="item__alias">(alias for <a href="#function-o-greyscale"><code>o-greyscale</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-gray-scale() { 
+  @return o-gray($value, $alpha);
+ }" data-collapsed="@function o-gray-scale() { ... }"><code>@function o-gray-scale() { ... }</code></pre></div><p>Refer to <a href="#function-o-greyscale">o-greyscale</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-grey-scale"><h3 class="item__heading"><a class="item__name" href="#function-o-grey-scale">o-grey-scale</a> <span class="item__alias">(alias for <a href="#function-o-gray-scale"><code>o-gray-scale</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-grey-scale() { 
+  @return o-gray($value, $alpha);
+ }" data-collapsed="@function o-grey-scale() { ... }"><code>@function o-grey-scale() { ... }</code></pre></div><p>Refer to <a href="#function-o-gray-scale">o-gray-scale</a>.</p></section><section class="main__item container item item--alias" id="undefined-function-o-rand-color"><h3 class="item__heading"><a class="item__name" href="#function-o-rand-color">o-rand-color</a> <span class="item__alias">(alias for <a href="#function-o-random-color"><code>o-random-color</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-rand-color() { 
+  @return o-random-color($alpha);
+ }" data-collapsed="@function o-rand-color() { ... }"><code>@function o-rand-color() { ... }</code></pre></div><p>Refer to <a href="#function-o-random-color">o-random-color</a>.</p></section><section class="main__item container item" id="undefined-function-o-strip-unit"><h3 class="item__heading"><a class="item__name" href="#function-o-strip-unit">o-strip-unit</a> <span class="item__aliased">(aliased as <a href="#function-o-strip"><code>o-strip</code></a> )</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-strip-unit($number) { 
+  @return $number / ($number * 0 + 1);
+ }" data-collapsed="@function o-strip-unit($number) { ... }"><code>@function o-strip-unit($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Strip unit from <code>$number</code></p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-o-as-percent"><code>o-as-percent</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#function-o-strip"><code>o-strip</code></a></li></ul></section><section class="main__item container item item--alias" id="undefined-function-o-strip"><h3 class="item__heading"><a class="item__name" href="#function-o-strip">o-strip</a> <span class="item__alias">(alias for <a href="#function-o-strip-unit"><code>o-strip-unit</code></a>)</span></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function o-strip() { 
+  @return o-strip-unit($number);
+ }" data-collapsed="@function o-strip() { ... }"><code>@function o-strip() { ... }</code></pre></div><p>Refer to <a href="#function-o-strip-unit">o-strip-unit</a>.</p></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-o-phi"><h3 class="item__heading"><a class="item__name" href="#variable-o-phi">o-phi</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$o-phi: 1.618034;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>{number}</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-o-golden-ratio"><code>o-golden-ratio</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">O-</span><!-- Version --> <span class="project-info__version">- v0.4.3</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
