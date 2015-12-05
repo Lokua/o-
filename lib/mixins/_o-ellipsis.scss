@@ -1,0 +1,8 @@
+/// Truncate text with an ellipsis (`...`).
+/// Works best on elements with a determined height
+/// (not `auto` or `100%`)
+@mixin o-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

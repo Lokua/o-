@@ -4,7 +4,8 @@
   "description": "sass framework",
   "main": "none",
   "scripts": {
-    "gen": "node bin/gen.js && node bin/gendoc.js"
+    "gen": "node bin/gen.js && node bin/gendoc.js",
+    "doc": "./node_modules/.bin/sassdoc lib/**/*.scss --verbose --dest doc"
   },
   "directories": {
     "test": "test"
@@ -35,6 +36,7 @@
     "load-grunt-tasks": "^1.0.0",
     "marked": "^0.3.2",
     "remarkable": "^1.6.0",
+    "sassdoc": "2.1.18",
     "tooly": "^0.8.0"
   },
   "dependencies": {}

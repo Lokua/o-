@@ -1,0 +1,47 @@
+/// @type {Number}
+$o-phi: 1.618034;
+
+
+/// Get the golden ratio of `$number` recursively scaled
+/// `$scale` times. A scale setting of less then 1 will return
+/// the smaller portion.
+///
+/// @example scss
+///   o-golden-ratio(30,  1) //=> 48.54102
+///   o-golden-ratio(30,  2) //=> 78.54102
+///   o-golden-ratio(30, -1) //=> 18.54102
+///   o-golden-ratio(30, -2) //=> 11.45898
+///
+/// @param {Number} $number [100]
+/// @param {Number} $scale [1]
+/// @return {Number} The golden A as to `$number`, or C as to `$number` if `$scale` is < 0
+/// @link http://codepen.io/Lokua/pen/JoRWRz/?editors=110
+@function o-golden-ratio($number: 100, $scale: 1) {
+
+  $ret: $number;
+  $n: $scale;
+
+  @if ($scale < $number) {
+    @while ($n < 0) {
+      $ret: $ret * ($o-phi - 1);
+      $n: $n + 1;
+    }
+    @return $ret;
+  }
+
+  @if ($scale > 0) {
+    @while ($n > 0) {
+      $ret: $ret * $o-phi;
+      $n: $n - 1;
+    }
+    @return $ret;
+  }
+
+  @return $number;
+}
+
+/// What the hell?
+/// @alias o-golden-ratio
+@function o-golden($number: 100, $scale: 1) {
+  @return o-golden-ratio($number, $scale);
+}

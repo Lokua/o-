@@ -1,0 +1,6 @@
+/// Symantic shorthand for `margin: 0 auto`
+/// @param {Number} $top [0]
+/// @param {Number} $bottom [$top]
+@mixin o-center($top: 0, $bottom: $top) {
+  margin: $top auto $bottom;
+}

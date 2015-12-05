@@ -1,0 +1,7 @@
+/// Vertically center an element that is a direct descendent
+/// of an element that extends `%o-v-center-parent`.
+/// @see %o-v-center-parent
+/// @link http://codepen.io/Lokua/pen/zxKQWG?editors=110
+%o-v-center-child {
+  vertical-align: middle;
+}

@@ -1,0 +1,10 @@
+/// Barebones unstyled list
+@mixin o-list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/// alias o-list-unstyled
+@mixin o-unstyled-list {
+  @return o-list-unstyled;
+}

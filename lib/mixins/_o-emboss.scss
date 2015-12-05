@@ -1,0 +1,19 @@
+/// Provide an inset look to an element
+/// @param {Number} $radius [0]
+/// @param {Number} $top-opacity [0.3]
+/// @param {Number} $bottom-opacity [0.25]
+/// @param {Number} $bg-opacity [0.2]
+@mixin o-emboss(
+
+    $radius: 0,
+    $top-opacity: 0.3,
+    $bottom-opacity: 0.25,
+    $bg-opacity: 0.2
+
+  ) {
+
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(#fff, $bottom-opacity);
+  box-shadow: inset 0 3px 3px rgba(#000, $top-opacity);
+  border-radius: $radius;
+}

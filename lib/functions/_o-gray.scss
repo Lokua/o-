@@ -1,0 +1,33 @@
+/// Create a grayscale color range 0-127 with optional alpha value
+/// @param {Number} $value [127]
+/// @param {Number} $alpha [1]
+/// @return {Color} rgba color
+/// @link http://codepen.io/Lokua/pen/zxKQWG?editors=110
+@function o-gray($value: 127, $alpha: 1) {
+  @return rgba($value, $value, $value, $alpha);
+}
+
+// /// @alias o-gray
+// @function o-grey($value: 127, $alpha: 1) {
+//   @return o-gray($value, $alpha);
+// }
+//
+// /// @alias o-grey
+// @function o-grayscale($value: 127, $alpha: 1) {
+//   @return o-gray($value, $alpha);
+// }
+//
+// /// @alias o-grayscale
+// @function o-greyscale($value: 127, $alpha: 1) {
+//   @return o-gray($value, $alpha);
+// }
+//
+// /// @alias o-greyscale
+// @function o-gray-scale($value: 127, $alpha: 1) {
+//   @return o-gray($value, $alpha);
+// }
+//
+// /// @alias o-gray-scale
+// @function o-grey-scale($value: 127, $alpha: 1) {
+//   @return o-gray($value, $alpha);
+// }

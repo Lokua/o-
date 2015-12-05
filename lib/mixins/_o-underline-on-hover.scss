@@ -1,0 +1,37 @@
+/// Animated underline most suitable for text.
+/// If using with an `a` element, be sure to set
+/// `text-decoration: none` on the element as well its `:hover` state
+/// @param {Color} $color [#000]
+/// @param {Number} $speed [0.3s]
+@mixin o-underline-on-hover($color: #000, $speed: 0.3s) {
+  position: relative;
+  text-decoration: none;
+
+  // hide underline
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+
+    // fallback unsupport anim
+    transform: scaleX(0);
+    transition: all $speed ease-in-out 0s;
+  }
+
+  // show underline
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+/// @deprecated Keeping for backwards compatibility. Use o-underline-on-hover instead
+/// @alias o-underline-on-hover
+@mixin o-underline-text-on-hover($color, $speed) {
+  @return o-underline-on-hover($color, $speed);
+}

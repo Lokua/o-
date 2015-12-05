@@ -1,0 +1,11 @@
+/// Opinionated minimal box shadow
+/// @param {Color} $color [rgba(#000, 0.25)]
+@mixin o-box-shadow($color: rgba(#000, 0.25)) {
+  box-shadow: 0px 1px 2px 1px $color;
+}
+
+/// @alias o-box-shadow
+/// @deprecated Keeping for backwards compatibility. Use `o-box-shadow` instead
+@mixin o-minimal-box-shadow($color) {
+  @return o-box-shadow($color);
+}

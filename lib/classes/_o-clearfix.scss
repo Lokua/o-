@@ -1,0 +1,8 @@
+/// modern clearfix
+%o-clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

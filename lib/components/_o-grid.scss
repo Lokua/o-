@@ -1,0 +1,54 @@
+/// If true, `%o-col-*` placeholders will
+/// expand to 100% width on screens smaller than `$o-break-at`
+/// @see $o-break-at
+/// @type {Bool}
+/// @group grid
+$o-auto-break: true;
+
+/// If `$o-auto-break` is true, sets the breakpoint at which
+/// screens smaller than will force all grid placeholders to
+/// assume full width
+/// @type {Number}
+/// @group grid
+$o-break-at: 768px;
+
+/// Generic grid container
+/// @group grid
+%o-grid {
+  @extend %o-clearfix;
+  width: 100%;
+}
+
+/// Dynamically add `$cols` number of columns to an element.
+/// Assumes a 12 column grid with no gutters.
+/// @group grid
+@mixin o-span($cols: 12, $float: left) {
+  width: 100 * ($float/12) + '%';
+  float: $float;
+}
+
+@for ($i from 1 through 12) {
+  %o-col-#{$i} {
+    @include o-span($i);
+    @if ($o-auto-break) {
+      @media (max-width: $o-break-at) {
+        @include o-span(12);
+      }
+    }
+  }
+}
+
+/// Use this mixin if you'd prefer to generate static bootstrap-style
+/// `.o-grid` and `o-col-*` (`.o-col-1` through `.o-col-12`)
+/// classes.
+/// @group grid
+@mixin o-generate-grid-classes {
+  .o-grid {
+    @extend %o-grid;
+  }
+  @for ($i from 1 through 12) {
+    .o-col-#{$i} {
+      @extend %o-col-#{$i};
+    }
+  }
+}

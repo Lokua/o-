@@ -1,0 +1,16 @@
+/// Set width and height in one line.
+/// If height is unspecified, height will be set to
+/// the same value as `$width` (effectively making this
+/// a "square" function)
+/// @param {Number} $width [100%]
+/// @param {Number} $height [$width]
+@mixin o-size($width: 100%, height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// Symantic alias for `o-size` with only one argument
+/// @param {Number} $size single value for both width and height
+@mixin o-square($size) {
+  @return o-size($size);
+}
