@@ -1,0 +1,41 @@
+/// Governs the max screen size for small media
+/// @type {Number}
+$o-break-small: 720px;
+
+/// Governs the max screen size for large media
+/// @type {Number}
+$o-break-large: 960px;
+
+/// Basic media support
+/// @param {String} $media Either (small|sm|s), (medium|md|m),  or (large|lg|l)
+/// @content
+@mixin o-media($media) {
+  @if $media == small or $media == sm or $media == s {
+    @media only screen and (max-width: $o-break-small) {
+      @content;
+    }
+  }
+  @else if $media == medium or $media == md or $media == m {
+    @media only screen and (min-width: $o-break-small + 1) and (max-width: $o-break-large - 1) {
+      @content;
+    }
+  }
+  @else if $media == large or $media == lg or $media == l {
+    @media only screen and (min-width: $o-break-large) {
+      @content;
+    }
+  }
+}
+
+/// "Trickle Down" media query helper.
+/// Equivalent of calling o-media(medium) and o-media(small) with
+/// the exact same content (ensure medium styles cascade downward).
+/// @content
+@mixin o-trickle {
+  @include o-media(md) {
+    @content;
+  }
+  @include o-media(sm) {
+    @content;
+  }
+}

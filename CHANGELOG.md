@@ -1,3 +1,10 @@
+## [0.6.2] - 2015.12.05
+
+#### Added
+
++ mixin: o-media
++ mixin: o-trickle
+
 ## [0.6] - 2015.12.05
 
 #### Added

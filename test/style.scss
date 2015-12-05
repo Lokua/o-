@@ -73,3 +73,22 @@ h1 {
   color: o-closest-md-color(blue);
   background: o-closest-md-color(yellow);
 }
+
+.media {
+  @include o-center;
+  background: white;
+  height: 64px;
+  border: 1px solid black;
+  @include o-media(lg) {
+    width: 25%;
+  }
+  @include o-media(md) {
+    width: 75%;
+  }
+  @include o-media(sm) {
+    width: 100%;
+  }
+  @include o-trickle {
+    background: red;
+  }
+}
