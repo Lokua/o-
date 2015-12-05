@@ -1,6 +1,7 @@
 /// Get a random rgb[a] color
 /// @param {Boolean} $alpha [false] - if true, randomize the alpha value in addition to the rgb
 /// @return {Color} rgb or rgba if `$alpha` is true
+/// @group color
 @function o-random-color($alpha: false) {
   @if ($alpha == true) {
     @return rgba(random(256)-1, random(256)-1, random(256)-1, random(100) / 100);
@@ -8,7 +9,7 @@
   @return rgb(random(256)-1, random(256)-1, random(256)-1);
 }
 
-// /// @alias o-random-color
-// @function o-rand-color($alpha) {
-//   @return o-random-color($alpha);
-// }
+/// @alias o-random-color
+@function o-rand-color($alpha) {
+  @return o-random-color($alpha);
+}

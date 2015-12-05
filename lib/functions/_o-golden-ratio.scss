@@ -40,7 +40,6 @@ $o-phi: 1.618034;
   @return $number;
 }
 
-/// What the hell?
 /// @alias o-golden-ratio
 @function o-golden($number: 100, $scale: 1) {
   @return o-golden-ratio($number, $scale);

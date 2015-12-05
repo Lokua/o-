@@ -2,15 +2,7 @@
 
 ###### pronounced "Oh Dash"
 
-> micro-framework for [sass][0]
-
-## Why
-
-Because I love to code, and wanted something simple and namespaced as to not collide with
-existing frameworks (bootstrap `@size` vs bourbon `@size` for example).
-
-This project is in its early stage of development - published at this point
-to reserve the package name. Names, structure, and implementations will surely change; more details will follow.
+> A collection of functions, mixins, and placeholders for [sass][0]
 
 ## Install
 
@@ -29,18 +21,18 @@ bower install o-dash --save
 @import path_to_node_modules/o-/o-
 ```
 
-Refer to the API documentation for placeholder,
-function, and mixin specifics located at [lokua.github.io/o-][2]
+Refer to the [sassdocs][3] for placeholder,
+function, and mixin specifics located at [lokua.github.io/o-][2], or internally at
+[doc/index.html](#doc/index.html)
 
 ## Dev
 
-`npm install`
+`NODE_ENV=development && npm install`
 
-If adding a new file, run `node bin/gen.js` afterwords. This will add
-the file to the sass imports list.
+If adding a new file, run `npm run gen` afterword to repopulate the `lib/_index.scss`
+imports file.
 
-Documentation generation is custom and housed internally; regenerate by 
-running `grunt doc`.
+Documentation is generated via `npm run doc`
 
 ## License
 [MIT][1]
@@ -48,3 +40,4 @@ running `grunt doc`.
 [0]: http://sass-lang.com
 [1]: http://lokua.net/license-mit.html
 [2]: http://lokua.github.io/o-
+[3]: http://sassdoc.com/

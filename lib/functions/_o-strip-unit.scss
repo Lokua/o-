@@ -5,8 +5,7 @@
   @return $number / ($number * 0 + 1);
 }
 
-// /// wtf...
-// /// @alias o-strip-unit
-// @function o-strip($number) {
-//   @return o-strip-unit($number);
-// }
+/// @alias o-strip-unit
+@function o-strip($number) {
+  @return o-strip-unit($number);
+}

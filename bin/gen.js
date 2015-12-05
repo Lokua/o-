@@ -1,43 +1,34 @@
-'use strict';
+'use strict'
 
-var fs = require('fs-extra'),
-    path = require('path');
+const fs = require('fs-extra')
+const path = require('path')
 
-var libdir = path.resolve(__dirname + path.sep + path.normalize('../lib')),
-    dirs = fs.readdirSync(libdir),
-    // ../lib/_main.sass
-    imports = ['// auto generated from o-/bin/gen.js\n@import core\n'],
-    docs = [];
+const libdir = path.resolve(__dirname + path.sep + path.normalize('../lib'))
+const dirs = fs.readdirSync(libdir)
+const imports = ['// auto generated from o-/bin/gen.js\n\n']
+const docs = []
 
 // --- start the program
-parse();
-write();
+parse()
+write()
 // --- end
 
 function parse() {
-  // for each dir in ../lib
-  dirs.forEach(function(dir, i) {
+  dirs.forEach((dir, i) => {
+    var dirpath = path.resolve(libdir, dir)
+    if (!fs.lstatSync(dirpath).isDirectory()) return
 
-    var dirpath = path.resolve(libdir, dir);
-    if (fs.lstatSync(dirpath).isDirectory()) {
-
-      // for each file in ../lib/{dir}
-      fs.readdirSync(dirpath).forEach(function(file) {
-
-        if (fs.lstatSync(path.resolve(dirpath, file)).isFile()) {
-          var name = dir + '/' + file.replace(/_|\.sass|\.scss/g, '');
-          imports.push('@import ' + name + '\n');
-        }
-
-      });
-    }
-  });
+    fs.readdirSync(dirpath).forEach(file => {
+      if (fs.lstatSync(path.resolve(dirpath, file)).isFile()) {
+        const name = `${dir}/${file.replace(/_|\.sass|\.scss/g, '')}`
+        imports.push(`@import '${name}';\n`)
+      }
+    })
+  })
 }
 
 function write() {
-  // ../lib/_main.sass
-  var outfile = libdir + path.sep + '_main.sass';
-  fs.writeFileSync(outfile, imports.join(''));
-  console.log('File written to ' + outfile);
+  const outfile = `${libdir}/_index.scss`
+  fs.writeFileSync(outfile, imports.join(''))
+  console.log('File written to ' + outfile)
 }
-

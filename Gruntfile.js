@@ -6,60 +6,50 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    exec: {
-      gen: {
-        cmd: 'npm run gen'
-      }
-    },
+    // exec: {
+    //   gen: {
+    //     cmd: 'npm run gen'
+    //   }
+    // },
 
     jade: {
-      dev: {
+      test: {
         options: {
           pretty: true,
           layout: false
         },
         files: {
-          'docs/index.html': 'docs/index.jade'
+          'test/index.html': 'test/index.jade'
         }
       }
     },
 
-    'sass-convert': {
-      options: {
-        from: 'scss',
-        to: 'sass'
-      },
-      files: {
-        src: ['lib/**/*.scss'],
-        dest: 'scss'
-      }
-    },
-
     sass: {
-      docs: {
-        options: {
-          style: 'expanded'
-        },
+      options: {
+        style: 'expanded'
+      },
+      test: {
         files: {
-          'docs/style.css': 'docs/style.sass'
+          'test/style.css': 'test/style.scss'
         }
       }
     },
 
     watch: {
-      jade: { 
-        files: ['docs/*.jade'],
-        tasks: ['jade:dev']
+      jade: {
+        files: ['test/*.jade'],
+        tasks: ['jade:test']
       },
       sass: {
-        files: ['lib/**/*.sass', 'docs/*.sass'],
-        tasks: ['exec', 'sass:docs']
+        files: ['**/*.scss'],
+        tasks: ['sass:test']
       }
     }
 
   });
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('gen', ['exec']);
-  grunt.registerTask('doc', ['exec', 'jade', 'sass']);
+  grunt.registerTask('test', ['jade:test', 'sass:test'])
+  // grunt.registerTask('gen', ['exec']);
+  // grunt.registerTask('doc', ['exec', 'jade', 'sass']);
 }

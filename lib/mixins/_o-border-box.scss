@@ -1,0 +1,8 @@
+/// Paul Irish box-sizing:border-box for errthang
+@mixin o-border-box {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+}

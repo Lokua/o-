@@ -1,0 +1,43 @@
+@import '../o-';
+
+$unit: 14px;
+
+body {
+  font-family: Monaco, 'Droid Sans Mono', Menlo, Consolas, monospace;
+  background: o-gray(40);
+  color: o-gray(90);
+}
+
+@include o-border-box;
+@include o-generate-grid-classes;
+@include o-checkbox;
+@include o-radio;
+
+[class^=o-col] {
+  height: $unit*4;
+  border: 1px solid o-gray(50);
+  border-radius: $unit/2;
+}
+
+.test {
+  @include o-emboss;
+  @include o-center($unit*2);
+  padding: $unit;
+  background: o-gray(90);
+  color: o-gray(33);
+}
+
+.rc {
+  @include o-size($unit*2);
+  display: inline-block;
+}
+@for $i from 1 through 333 {
+  .rc-#{$i} {
+    background: o-random-color();
+  }
+}
+
+@include o-range;
+.range {
+  @include o-range(red, blue, true);
+}

@@ -1,0 +1,83 @@
+doctype
+head
+  link(rel='stylesheet' href='style.css')
+body
+  
+  h1 o- test suite
+  
+  
+  .test
+    h2 o-checkbox
+    .checkbox
+      input(type='checkbox')
+      label
+  
+  .test
+    h2 o-radio
+    .radio
+      input(type='radio' name='r')
+      label
+    .radio
+      input(type='radio' name='r')
+      label
+  
+  .test
+    h2 o-generate-grid-classes
+    
+    .o-grid
+      .o-col-6 6
+      .o-col-6 6
+    
+    .o-grid
+      - var n = 0
+      while n++ < 12
+        .o-col-1 1
+    
+    .o-grid
+      - n = 0
+      while n++ < 6
+        .o-col-2 2
+    
+    .o-grid
+      - n = 0
+      while n++ < 4
+        .o-col-3 3
+    
+    .o-grid
+      - n = 0
+      while n++ < 3
+        .o-col-4 4
+    
+    .o-grid
+      .o-col-7 7
+      .o-col-5 5
+      
+    .o-grid
+      .o-col-8 8
+      .o-col-4 4
+      
+    .o-grid
+      .o-col-9 9
+      .o-col-3 3
+      
+    .o-grid
+      .o-col-10 10
+      .o-col-2 2    
+      
+    .o-grid
+      .o-col-11 11
+      .o-col-1 1 
+  
+  .test
+    h2 o-random-color | o-size
+    - n = 0
+    while n++ < 333
+      .rc(class='rc-#{n}')= n
+  
+  .test
+    h2 o-range
+    input(type='range')
+    .range
+      input(type='range')
+    
+    

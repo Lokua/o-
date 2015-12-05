@@ -23,11 +23,11 @@ $o-break-at: 768px;
 /// Assumes a 12 column grid with no gutters.
 /// @group grid
 @mixin o-span($cols: 12, $float: left) {
-  width: 100 * ($float/12) + '%';
+  width: 100 * ($cols/12) + 0%;
   float: $float;
 }
 
-@for ($i from 1 through 12) {
+@for $i from 1 through 12 {
   %o-col-#{$i} {
     @include o-span($i);
     @if ($o-auto-break) {
@@ -46,7 +46,7 @@ $o-break-at: 768px;
   .o-grid {
     @extend %o-grid;
   }
-  @for ($i from 1 through 12) {
+  @for $i from 1 through 12 {
     .o-col-#{$i} {
       @extend %o-col-#{$i};
     }

@@ -1,0 +1,86 @@
+/// Custom radio factory. Customizations not
+/// available through parameters can be applied to the label
+/// element child of classname `$class` as follows:
+///
+/// + Using the mixins defaults, the colors and appearence of the radio
+/// can be targeted via `.radio label`.
+/// + For the bullet inside the radio,
+/// target `.radio input:radio + label:after`
+///
+/// See the example for required markup:
+///
+/// @example html
+///   <div class="radio">
+///     <input type="radio" name="a"/>
+///     <label></label>
+///   </div>
+///   <div class="radio">
+///     <input type="radio" name="a"/>
+///     <label></label>
+///   </div>
+///
+/// @param {Number} $class [checkbox] the classname for your checkbox container
+/// @param {Number} $size [18px]
+/// @param {Number} $color [#222]
+/// @param {Number} $background [#ddd]
+/// @param {Number} $border [2px solid lighten($color, 10%)]
+/// @link http://codepen.io/Lokua/pen/YwzaGe?editors=110
+/// @group form elements
+@mixin o-radio(
+
+    $class: radio,
+    $size: 18px,
+    $color: #222,
+    $background: #ddd,
+    $border: 2px solid lighten($color, 10%)
+
+  ) {
+
+  .#{$class} {
+    position: relative;
+    display: inline-block;
+
+    input[type=radio] {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+
+      &:checked + label:after {
+        $bullet-size: $size / 1.5;
+
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: $bullet-size/4;
+        left: $bullet-size/4;
+        width: $bullet-size;
+        height: $bullet-size;
+        background: $color;
+        border-radius: 50%;
+        content: '';
+      }
+      
+      &:not(:checked) + label:after {
+        opacity: 0;
+      }
+    }
+
+    label {
+      box-sizing: border-box;
+      display: inline-block;
+      width: $size;
+      height: $size;
+      color: $color;
+      background: $background;
+      border: $border;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  }
+}
