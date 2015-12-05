@@ -1,8 +1,19 @@
-## [0.4.3] - 2015.03.17
+## [0.5] - 2015.12.05
 
 #### Changed
 
-+ bumped version SOLELY for stupid bower version mismatch
++ moved to sassdoc
++ o-grayscale is now range 0-100 instead of 0-255
++ completely different o-checkbox implementation
+
+#### Added
+
++ component: o-radio
++ mixin: o-border-box
+
+#### Removed
+
++ component: o-loader
 
 ## [0.4.2] - 2015.03.13
 
