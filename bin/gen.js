@@ -16,7 +16,9 @@ write()
 function parse() {
   dirs.forEach((dir, i) => {
     var dirpath = path.resolve(libdir, dir)
-    if (!fs.lstatSync(dirpath).isDirectory()) return
+    if (dir === 'resources' || !fs.lstatSync(dirpath).isDirectory()) {
+      return
+    }
 
     fs.readdirSync(dirpath).forEach(file => {
       if (fs.lstatSync(path.resolve(dirpath, file)).isFile()) {

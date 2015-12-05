@@ -25,7 +25,7 @@
 /// @param {Number} $background [#ddd]
 /// @param {Number} $border [2px solid lighten($color, 10%)]
 /// @link http://codepen.io/Lokua/pen/YwzaGe?editors=110
-/// @group form elements
+/// @group form
 @mixin o-radio(
 
     $class: radio,
@@ -65,7 +65,7 @@
         border-radius: 50%;
         content: '';
       }
-      
+
       &:not(:checked) + label:after {
         opacity: 0;
       }

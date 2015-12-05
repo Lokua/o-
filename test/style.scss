@@ -1,11 +1,20 @@
 @import '../o-';
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
 $unit: 14px;
+$text-color: o-md-color('grey', 700);
 
 body {
-  font-family: Monaco, 'Droid Sans Mono', Menlo, Consolas, monospace;
-  background: o-gray(40);
-  color: o-gray(90);
+  font-family: 'Droid Sans Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: $text-color;
+}
+
+h1 {
+  text-align: center;
+  color: $text-color;
 }
 
 @include o-border-box;
@@ -16,28 +25,51 @@ body {
 [class^=o-col] {
   height: $unit*4;
   border: 1px solid o-gray(50);
-  border-radius: $unit/2;
 }
 
 .test {
-  @include o-emboss;
   @include o-center($unit*2);
   padding: $unit;
-  background: o-gray(90);
-  color: o-gray(33);
+  width: 75%;
 }
 
 .rc {
-  @include o-size($unit*2);
+  @include o-size($unit);
   display: inline-block;
+  font-size: $unit/2;
+  margin: 0;
+  padding: 0;
 }
-@for $i from 1 through 333 {
+@for $i from 1 through 100 {
   .rc-#{$i} {
-    background: o-random-color();
+    background: o-closest-md-color(o-random-color());
   }
 }
 
 @include o-range;
 .range {
   @include o-range(red, blue, true);
+}
+
+.p1 {
+  color: o-md-color('red');
+}
+.p2 {
+  color: o-md-color('green');
+}
+.p3 {
+  color: o-md-color('blue');
+}
+
+.p4 {
+  color: o-closest-md-color(yellow);
+  background: o-closest-md-color(blue);
+}
+.p5 {
+  color: o-closest-md-color(green);
+  background: o-closest-md-color(red);
+}
+.p6 {
+  color: o-closest-md-color(blue);
+  background: o-closest-md-color(yellow);
 }

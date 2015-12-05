@@ -1,3 +1,10 @@
+## [0.6] - 2015.12.05
+
+#### Added
+
++ function: `o-md-color`
++ function: `o-closest-md-color`
+
 ## [0.5] - 2015.12.05
 
 #### Changed

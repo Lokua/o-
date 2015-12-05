@@ -13,23 +13,3 @@
 @function o-grey($value, $alpha) {
   @return o-gray($value, $alpha);
 }
-
-/// @alias o-grey
-@function o-grayscale($value, $alpha) {
-  @return o-gray($value, $alpha);
-}
-
-/// @alias o-grayscale
-@function o-greyscale($value, $alpha) {
-  @return o-gray($value, $alpha);
-}
-
-/// @alias o-greyscale
-@function o-gray-scale($value, $alpha) {
-  @return o-gray($value, $alpha);
-}
-
-/// @alias o-gray-scale
-@function o-grey-scale($value, $alpha) {
-  @return o-gray($value, $alpha);
-}

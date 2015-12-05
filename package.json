@@ -1,8 +1,8 @@
 {
   "name": "o-",
-  "version": "0.5",
-  "description": "sass framework",
-  "main": "none",
+  "version": "0.6.0",
+  "description": "A collection of functions, mixins, and placeholders for sass",
+  "main": "index.js",
   "scripts": {
     "gen": "node bin/gen",
     "doc": "./node_modules/.bin/sassdoc lib/**/*.scss --verbose --dest doc"
@@ -31,5 +31,10 @@
     "load-grunt-tasks": "^1.0.0",
     "sassdoc": "2.1.18"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chroma-js": "1.1.1",
+    "levenshtein": "1.0.5",
+    "lodash.foreach": "3.0.3",
+    "lodash.values": "3.0.0"
+  }
 }

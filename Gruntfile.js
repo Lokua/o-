@@ -1,16 +1,10 @@
-'use strict';
+'use strict'
 
 module.exports = function(grunt) {
 
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
-
-    // exec: {
-    //   gen: {
-    //     cmd: 'npm run gen'
-    //   }
-    // },
 
     jade: {
       test: {
@@ -26,7 +20,8 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        style: 'expanded'
+        style: 'expanded',
+        functions: require('./index')
       },
       test: {
         files: {
@@ -45,11 +40,8 @@ module.exports = function(grunt) {
         tasks: ['sass:test']
       }
     }
+  })
 
-  });
-
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['watch'])
   grunt.registerTask('test', ['jade:test', 'sass:test'])
-  // grunt.registerTask('gen', ['exec']);
-  // grunt.registerTask('doc', ['exec', 'jade', 'sass']);
 }

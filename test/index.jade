@@ -25,10 +25,6 @@ body
     h2 o-generate-grid-classes
     
     .o-grid
-      .o-col-6 6
-      .o-col-6 6
-    
-    .o-grid
       - var n = 0
       while n++ < 12
         .o-col-1 1
@@ -48,6 +44,10 @@ body
       while n++ < 3
         .o-col-4 4
     
+    .o-grid
+      .o-col-6 6
+      .o-col-6 6      
+      
     .o-grid
       .o-col-7 7
       .o-col-5 5
@@ -69,15 +69,27 @@ body
       .o-col-1 1 
   
   .test
-    h2 o-random-color | o-size
+    h2 o-closest-md-color(o-random-color()) | o-size
     - n = 0
-    while n++ < 333
-      .rc(class='rc-#{n}')= n
+    while n++ < 100
+      .rc(class='rc-#{n}')
   
   .test
     h2 o-range
     input(type='range')
     .range
       input(type='range')
+  
+  .test
+    h2 o-md-color
+    p.p1 some text
+    p.p2 some text
+    p.p3 some text
+    
+  .test
+    h2 o-closest-md-color
+    p.p4 some text
+    p.p5 some text
+    p.p6 some text
     
     

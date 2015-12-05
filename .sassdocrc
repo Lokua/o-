@@ -1,5 +1,6 @@
 {
   "display": {
     "alias": true
-  }
+  },
+  "descriptionPath": "./README.md"
 }

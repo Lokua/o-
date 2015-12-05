@@ -5,7 +5,7 @@
 /// @param {Bool} $rounded [false]
 /// @link https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 /// @link http://codepen.io/Lokua/pen/ogaaPd
-/// @group form elements
+/// @group form
 @mixin o-range($track-color: #aaa, $knob-color: #444, $rounded: false) {
 
   $track-height: 2px;

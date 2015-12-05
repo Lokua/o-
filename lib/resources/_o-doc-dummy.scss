@@ -1,0 +1,20 @@
+//// @link https://github.com/Lokua/o-#Usage
+
+/// Material design colors accessor.
+/// # Note:
+/// this function requires registration of `o-` with node-sass:options.functions
+/// @param {String} $color The material design color name (must be wrapped in quotes)
+/// @param {Number} $shade [500]
+/// @group color
+@function o-md-color($color, $shade: 500) {
+  // this function requires registration of o- with node-sass:options.functions
+}
+
+/// Find the material design color that is closest to `$color`
+/// # Note:
+/// this function requires registration of `o-` with node-sass:options.functions
+/// @param {Color} $color Any valid SassColor
+/// @group color
+@function o-closest-md-color($color) {
+  // this function requires registration of o- with node-sass:options.functions
+}
