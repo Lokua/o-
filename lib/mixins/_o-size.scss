@@ -12,5 +12,5 @@
 /// Symantic alias for `o-size` with only one argument
 /// @param {Number} $size single value for both width and height
 @mixin o-square($size) {
-  @return o-size($size);
+  @include o-size($size);
 }

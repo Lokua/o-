@@ -34,7 +34,7 @@ h1 {
 }
 
 .rc {
-  @include o-size($unit);
+  @include o-square($unit);
   display: inline-block;
   font-size: $unit/2;
   margin: 0;

@@ -213,304 +213,304 @@ h1 {
   padding: 0; }
 
 .rc-1 {
-  background: #64ffda; }
+  background: #e57373; }
 
 .rc-2 {
-  background: #9e9d24; }
+  background: #4caf50; }
 
 .rc-3 {
-  background: #212121; }
+  background: #7986cb; }
 
 .rc-4 {
-  background: #212121; }
-
-.rc-5 {
-  background: #6200ea; }
-
-.rc-6 {
-  background: #880e4f; }
-
-.rc-7 {
-  background: #e040fb; }
-
-.rc-8 {
-  background: #4db6ac; }
-
-.rc-9 {
-  background: #26a69a; }
-
-.rc-10 {
   background: #7c4dff; }
 
+.rc-5 {
+  background: #9575cd; }
+
+.rc-6 {
+  background: #2196f3; }
+
+.rc-7 {
+  background: #e57373; }
+
+.rc-8 {
+  background: #78909c; }
+
+.rc-9 {
+  background: #311b92; }
+
+.rc-10 {
+  background: #1a237e; }
+
 .rc-11 {
-  background: #cfd8dc; }
+  background: #304ffe; }
 
 .rc-12 {
   background: #80cbc4; }
 
 .rc-13 {
-  background: #1de9b6; }
+  background: #00e676; }
 
 .rc-14 {
-  background: #26a69a; }
+  background: #689f38; }
 
 .rc-15 {
-  background: #b71c1c; }
+  background: #6200ea; }
 
 .rc-16 {
-  background: #795548; }
+  background: #7e57c2; }
 
 .rc-17 {
   background: #64dd17; }
 
 .rc-18 {
-  background: #00e676; }
+  background: #64ffda; }
 
 .rc-19 {
-  background: #bcaaa4; }
+  background: #880e4f; }
 
 .rc-20 {
-  background: #84ffff; }
+  background: #0d47a1; }
 
 .rc-21 {
-  background: #2e7d32; }
-
-.rc-22 {
-  background: #5d4037; }
-
-.rc-23 {
-  background: #2e7d32; }
-
-.rc-24 {
-  background: #81c784; }
-
-.rc-25 {
-  background: #3e2723; }
-
-.rc-26 {
-  background: #ef9a9a; }
-
-.rc-27 {
-  background: #d32f2f; }
-
-.rc-28 {
-  background: #ef9a9a; }
-
-.rc-29 {
-  background: #f06292; }
-
-.rc-30 {
-  background: #3949ab; }
-
-.rc-31 {
   background: #e57373; }
 
-.rc-32 {
-  background: #80cbc4; }
+.rc-22 {
+  background: #c5cae9; }
 
-.rc-33 {
-  background: #00c853; }
+.rc-23 {
+  background: #cfd8dc; }
 
-.rc-34 {
-  background: #e64a19; }
+.rc-24 {
+  background: #8d6e63; }
 
-.rc-35 {
-  background: #ad1457; }
+.rc-25 {
+  background: #c51162; }
 
-.rc-36 {
-  background: #d1c4e9; }
+.rc-26 {
+  background: #9c27b0; }
 
-.rc-37 {
-  background: #3f51b5; }
+.rc-27 {
+  background: #ab47bc; }
 
-.rc-38 {
-  background: #00c853; }
+.rc-28 {
+  background: #3949ab; }
 
-.rc-39 {
-  background: #1565c0; }
+.rc-29 {
+  background: #689f38; }
 
-.rc-40 {
+.rc-30 {
+  background: #d81b60; }
+
+.rc-31 {
   background: #81c784; }
 
+.rc-32 {
+  background: #6d4c41; }
+
+.rc-33 {
+  background: #e91e63; }
+
+.rc-34 {
+  background: #388e3c; }
+
+.rc-35 {
+  background: #fff3e0; }
+
+.rc-36 {
+  background: #7e57c2; }
+
+.rc-37 {
+  background: #64b5f6; }
+
+.rc-38 {
+  background: #90a4ae; }
+
+.rc-39 {
+  background: #1a237e; }
+
+.rc-40 {
+  background: #212121; }
+
 .rc-41 {
-  background: #00c853; }
+  background: #d500f9; }
 
 .rc-42 {
   background: #76ff03; }
 
 .rc-43 {
-  background: #689f38; }
+  background: #1565c0; }
 
 .rc-44 {
-  background: #b39ddb; }
+  background: #afb42b; }
 
 .rc-45 {
-  background: #ba68c8; }
+  background: #311b92; }
 
 .rc-46 {
-  background: #84ffff; }
+  background: #4db6ac; }
 
 .rc-47 {
-  background: #827717; }
+  background: #6200ea; }
 
 .rc-48 {
-  background: #616161; }
+  background: #00c853; }
 
 .rc-49 {
-  background: #26c6da; }
+  background: #b0bec5; }
 
 .rc-50 {
-  background: #6d4c41; }
+  background: #7986cb; }
 
 .rc-51 {
-  background: #ec407a; }
+  background: #311b92; }
 
 .rc-52 {
-  background: #9e9d24; }
+  background: #64dd17; }
 
 .rc-53 {
-  background: #558b2f; }
-
-.rc-54 {
-  background: #1976d2; }
-
-.rc-55 {
-  background: #33691e; }
-
-.rc-56 {
-  background: #64dd17; }
-
-.rc-57 {
-  background: #b9f6ca; }
-
-.rc-58 {
-  background: #558b2f; }
-
-.rc-59 {
-  background: #3e2723; }
-
-.rc-60 {
-  background: #795548; }
-
-.rc-61 {
-  background: #f06292; }
-
-.rc-62 {
-  background: #ff80ab; }
-
-.rc-63 {
-  background: #ffd54f; }
-
-.rc-64 {
-  background: #81c784; }
-
-.rc-65 {
-  background: #ab47bc; }
-
-.rc-66 {
   background: #0097a7; }
 
-.rc-67 {
-  background: #a5d6a7; }
+.rc-54 {
+  background: #536dfe; }
 
-.rc-68 {
-  background: #64dd17; }
+.rc-55 {
+  background: #6a1b9a; }
 
-.rc-69 {
-  background: #f48fb1; }
-
-.rc-70 {
-  background: #1a237e; }
-
-.rc-71 {
-  background: #e040fb; }
-
-.rc-72 {
-  background: #ffea00; }
-
-.rc-73 {
-  background: #757575; }
-
-.rc-74 {
-  background: #5d4037; }
-
-.rc-75 {
-  background: #00bfa5; }
-
-.rc-76 {
-  background: #827717; }
-
-.rc-77 {
-  background: #bcaaa4; }
-
-.rc-78 {
-  background: #26c6da; }
-
-.rc-79 {
-  background: #18ffff; }
-
-.rc-80 {
-  background: #81c784; }
-
-.rc-81 {
-  background: #8d6e63; }
-
-.rc-82 {
-  background: #4a148c; }
-
-.rc-83 {
-  background: #880e4f; }
-
-.rc-84 {
-  background: #bcaaa4; }
-
-.rc-85 {
-  background: #8e24aa; }
-
-.rc-86 {
-  background: #9c27b0; }
-
-.rc-87 {
-  background: #4a148c; }
-
-.rc-88 {
-  background: #f48fb1; }
-
-.rc-89 {
-  background: #4527a0; }
-
-.rc-90 {
-  background: #ea80fc; }
-
-.rc-91 {
-  background: #455a64; }
-
-.rc-92 {
-  background: #e040fb; }
-
-.rc-93 {
+.rc-56 {
   background: #26a69a; }
 
-.rc-94 {
-  background: #c5e1a5; }
+.rc-57 {
+  background: #e57373; }
 
-.rc-95 {
-  background: #303f9f; }
+.rc-58 {
+  background: #80cbc4; }
 
-.rc-96 {
-  background: #424242; }
+.rc-59 {
+  background: #bcaaa4; }
 
-.rc-97 {
-  background: #795548; }
+.rc-60 {
+  background: #ea80fc; }
 
-.rc-98 {
-  background: #7c4dff; }
+.rc-61 {
+  background: #aed581; }
 
-.rc-99 {
+.rc-62 {
+  background: #546e7a; }
+
+.rc-63 {
+  background: #1b5e20; }
+
+.rc-64 {
+  background: #43a047; }
+
+.rc-65 {
+  background: #ec407a; }
+
+.rc-66 {
+  background: #ff9e80; }
+
+.rc-67 {
+  background: #9c27b0; }
+
+.rc-68 {
+  background: #6a1b9a; }
+
+.rc-69 {
+  background: #304ffe; }
+
+.rc-70 {
   background: #f48fb1; }
 
+.rc-71 {
+  background: #78909c; }
+
+.rc-72 {
+  background: #9e9d24; }
+
+.rc-73 {
+  background: #dcedc8; }
+
+.rc-74 {
+  background: #1565c0; }
+
+.rc-75 {
+  background: #1565c0; }
+
+.rc-76 {
+  background: #00acc1; }
+
+.rc-77 {
+  background: #64dd17; }
+
+.rc-78 {
+  background: #6d4c41; }
+
+.rc-79 {
+  background: #f9a825; }
+
+.rc-80 {
+  background: #b71c1c; }
+
+.rc-81 {
+  background: #b71c1c; }
+
+.rc-82 {
+  background: #78909c; }
+
+.rc-83 {
+  background: #ff8a65; }
+
+.rc-84 {
+  background: #9c27b0; }
+
+.rc-85 {
+  background: #b71c1c; }
+
+.rc-86 {
+  background: #aeea00; }
+
+.rc-87 {
+  background: #304ffe; }
+
+.rc-88 {
+  background: #00e676; }
+
+.rc-89 {
+  background: #9fa8da; }
+
+.rc-90 {
+  background: #37474f; }
+
+.rc-91 {
+  background: #512da8; }
+
+.rc-92 {
+  background: #8e24aa; }
+
+.rc-93 {
+  background: #1de9b6; }
+
+.rc-94 {
+  background: #26a69a; }
+
+.rc-95 {
+  background: #ffd54f; }
+
+.rc-96 {
+  background: #8bc34a; }
+
+.rc-97 {
+  background: #9e9d24; }
+
+.rc-98 {
+  background: #c8e6c9; }
+
+.rc-99 {
+  background: #66bb6a; }
+
 .rc-100 {
-  background: #f8bbd0; }
+  background: #afb42b; }
 
 input[type=range] {
   -webkit-appearance: none;
