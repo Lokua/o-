@@ -17,11 +17,10 @@ $o-phi: 1.618034;
 /// @return {Number} The golden A as to `$number`, or C as to `$number` if `$scale` is < 0
 /// @link http://codepen.io/Lokua/pen/JoRWRz/?editors=110
 @function o-golden-ratio($number: 100, $scale: 1) {
-
   $ret: $number;
   $n: $scale;
 
-  @if ($scale < $number) {
+  @if ($scale < 0) {
     @while ($n < 0) {
       $ret: $ret * ($o-phi - 1);
       $n: $n + 1;
